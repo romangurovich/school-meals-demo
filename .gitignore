@@ -1,7 +1,7 @@
 .DS_Store
 .dist
 .ideas
-dist
+/dist
 i18n/descriptors
 node_modules
 npm-debug.log
