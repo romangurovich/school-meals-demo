@@ -1,4 +1,7 @@
 # school-meals
+
+<https://romangurovich.github.io/school-meals-demo>
+
 Application for free/reduced [school meals](http://www.fns.usda.gov/school-meals/child-nutrition-programs).
 
 ## Developing
