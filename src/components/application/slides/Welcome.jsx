@@ -28,7 +28,7 @@ class Welcome extends React.Component {
           <FormattedMessage
               id="app.slides.welcome.intro"
               description="Introductory paragraph."
-              defaultMessage="This is the {organizationName} electronic application for free and reduced priced meals for the {usda}&rsquo;s National School Lunch &amp; School Breakfast Programs."
+              defaultMessage="This is {organizationName}'s 2025 Summer Electronic Benefit Transfer (EBT) Program for Children. If your household qualifies, you can receive a EBT card with money for each student."
               values={{
                 organizationName: organization.name,
                 usda: <abbr title="United States Department of Agriculture">USDA</abbr>
@@ -40,7 +40,7 @@ class Welcome extends React.Component {
           <FormattedMessage
               id="app.slides.welcome.onlineInstructions"
               description="Instructions on how to apply online."
-              defaultMessage="This interactive application will guide you through the application process. When you are ready to apply, click the ‘{buttonText}’ button below to begin."
+              defaultMessage="This application will guide you through the process of applying for benefits. If you want to use a paper application, you can print it and return it to {Address}."
               values={{
                 buttonText: nextButtonText
               }}
@@ -50,8 +50,8 @@ class Welcome extends React.Component {
         <p>
           <FormattedMessage
               id="app.slides.welcome.paperInstructions"
-              description="Instructions on how to apply with a paper application."
-              defaultMessage="If you would like to apply using the {link}, you can print and complete it and then return it to us at {address}."
+              description="Instructions on how many to complete per household."
+              defaultMessage="Only complete one application per household, even if you have multiple children."
               values={{
                 address: organization.paperApplication.address,
                 link:
