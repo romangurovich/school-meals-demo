@@ -33,34 +33,38 @@ class BeforeYouBegin extends React.Component {
 
     return (
       <Slide header={headerText} id="before-you-begin">
-        <p className="usa-font-lead">
-          <FormattedMessage
-              id="app.slides.beforeYouBegin.subheading"
-              description="Introductory tagline."
-              defaultMessage="there are a few things you should know."
-          />
-        </p>
-
         <p>
           <FormattedMessage
               id="app.slides.beforeYouBegin.householdPrograms"
-              description="Hist that you can skip most of application with a household program."
-              defaultMessage="If you received a {tooltip} from the school saying that your children were automatically approved (directly certified) for free meals for the {schoolYear} school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application."
-              values={{
-                tooltip:
-  <Tooltip text={tooltiptext.letter}>
-    <FormattedMessage
-        id="app.slides.beforeYouBegin.letter"
-        description="As in a letter from a school."
-        defaultMessage="letter"
-    />
-  </Tooltip>,
-                schoolYear: <SchoolYear />,
-                assistanceProgramList: <SerialList items={assistancePrograms} intersection={true} />
-              }}
+              description="Note that you can skip most of application with previous participation in a household program."
+              defaultMessage="You should not have to submit an application if someone in your household participates in:"
           />
-        </p>
+           <ul className="usa-content-list">
+          <li>
+            <FormattedMessage
+                id="app.slides.beforeYouBegin.eligibility1"
+                description="Household program List item"
+                defaultMessage="Supplemental Nutrition Assistance Program (SNAP)"
+            />
+          </li>
 
+          <li>
+            <FormattedMessage
+                id="app.slides.beforeYouBegin.eligibility2"
+                description="Household program List item"
+                defaultMessage="Temporary Assistasnce for Needy Families (TANF)"
+            />
+          </li>
+
+          <li>
+            <FormattedMessage
+                id="app.slides.beforeYouBegin.eligibility3"
+                description="Household program List item"
+                defaultMessage="Food Distribution Program on Indian Reservations (FDPIR)"
+            />
+          </li>
+        </ul>
+        </p>
         <p>
           <FormattedMessage
               id="app.slides.beforeYouBegin.oneApplication"
@@ -95,33 +99,6 @@ class BeforeYouBegin extends React.Component {
             </Tooltip>
           </strong>
         </p>
-
-        <ul className="usa-content-list">
-          <li>
-            <FormattedMessage
-                id="app.slides.beforeYouBegin.eligibility1"
-                description="Eligibility List item"
-                defaultMessage="your total household income and size in the month the application is filled out, or the month before, or"
-            />
-          </li>
-
-          <li>
-            <FormattedMessage
-                id="app.slides.beforeYouBegin.eligibility2"
-                description="Eligibility List item"
-                defaultMessage="your child’s individual status as foster, homeless, migrant or runaway, or"
-            />
-          </li>
-
-          <li>
-            <FormattedMessage
-                id="app.slides.beforeYouBegin.eligibility3"
-                description="Eligibility List item"
-                defaultMessage="participation in an assistance program by any member of your household"
-            />
-          </li>
-        </ul>
-
         <p>
           <FormattedMessage
               id="app.slides.beforeYouBegin.status"
