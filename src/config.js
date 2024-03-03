@@ -5,6 +5,7 @@
 export const schoolYear = null
 
 export const organization = {
+  state: 'North Carolina',
   name: 'Applewood School District',
   shortname: 'ASD',
   logoUrl: 'img/Applewood_logo.png',

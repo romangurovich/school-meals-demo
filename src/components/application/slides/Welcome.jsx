@@ -28,9 +28,10 @@ class Welcome extends React.Component {
           <FormattedMessage
               id="app.slides.welcome.intro"
               description="Introductory paragraph."
-              defaultMessage="This is {organizationName}'s 2025 Summer Electronic Benefit Transfer (EBT) Program for Children. If your household qualifies, you can receive a EBT card with money for each student."
+              defaultMessage="This is {stateName}'s 2025 Summer Electronic Benefit Transfer (EBT) Program for Children. If your household qualifies, you can receive a EBT card with money for {italicized} student."
               values={{
-                organizationName: organization.name,
+                italicized: (<i>each</i>),
+                stateName: organization.state,
                 usda: <abbr title="United States Department of Agriculture">USDA</abbr>
               }}
           />
@@ -38,30 +39,31 @@ class Welcome extends React.Component {
 
         <p>
           <FormattedMessage
-              id="app.slides.welcome.onlineInstructions"
-              description="Instructions on how to apply online."
-              defaultMessage="This application will guide you through the process of applying for benefits. If you want to use a paper application, you can print it and return it to {Address}."
+              id="app.slides.welcome.paperInstructions"
+              description="Instructions on how to apply via paper application."
+              defaultMessage="This application will guide you through the process of applying for benefits. If you want to use a {link}, you can print it and return it to {address}."
               values={{
-                buttonText: nextButtonText
+                buttonText: nextButtonText,
+                address: organization.paperApplication.address,
+                link:
+                  <a href={organization.paperApplication.url} target="_blank" rel="noopener noreferrer">
+                    <FormattedMessage
+                        id="app.slides.welcome.paperApplication"
+                        description="Phrase"
+                        defaultMessage="paper application"
+                    />
+                  </a>
               }}
           />
         </p>
 
         <p>
           <FormattedMessage
-              id="app.slides.welcome.paperInstructions"
+              id="app.slides.welcome.onlineInstructions"
               description="Instructions on how many to complete per household."
-              defaultMessage="Only complete one application per household, even if you have multiple children."
+              defaultMessage="{bolded} even if you have multiple children."
               values={{
-                address: organization.paperApplication.address,
-                link:
-  <a href={organization.paperApplication.url} target="_blank" rel="noopener noreferrer">
-    <FormattedMessage
-        id="app.slides.welcome.paperApplication"
-        description="Phrase"
-        defaultMessage="paper application"
-    />
-  </a>
+                bolded: <strong>Only complete one application per household,</strong>,
               }}
           />
         </p>
