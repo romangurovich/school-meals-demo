@@ -46,13 +46,13 @@ class Welcome extends React.Component {
                 buttonText: nextButtonText,
                 address: organization.paperApplication.address,
                 link:
-                  <a href={organization.paperApplication.url} target="_blank" rel="noopener noreferrer">
-                    <FormattedMessage
-                        id="app.slides.welcome.paperApplication"
-                        description="Phrase"
-                        defaultMessage="paper application"
-                    />
-                  </a>
+  <a href={organization.paperApplication.url} target="_blank" rel="noopener noreferrer">
+    <FormattedMessage
+        id="app.slides.welcome.paperApplication"
+        description="Phrase"
+        defaultMessage="paper application"
+    />
+  </a>
               }}
           />
         </p>
@@ -63,7 +63,7 @@ class Welcome extends React.Component {
               description="Instructions on how many to complete per household."
               defaultMessage="{bolded} even if you have multiple children."
               values={{
-                bolded: <strong>Only complete one application per household,</strong>,
+                bolded: <strong>Only complete one application per household,</strong>
               }}
           />
         </p>

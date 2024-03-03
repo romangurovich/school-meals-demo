@@ -1,8 +1,6 @@
 import React from 'react'
 import Slide from '../Slide'
-import SerialList from '../SerialList'
-import SchoolYear from '../SchoolYear'
-import { assistancePrograms, assistanceProgramsVar, organization } from '../../../config'
+import { assistanceProgramsVar, organization } from '../../../config'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { Glyphicon } from 'react-bootstrap'
@@ -39,31 +37,31 @@ class BeforeYouBegin extends React.Component {
               description="Note that you can skip most of application with previous participation in a household program."
               defaultMessage="You should not have to submit an application if someone in your household participates in:"
           />
-           <ul className="usa-content-list">
-          <li>
-            <FormattedMessage
-                id="app.slides.beforeYouBegin.eligibility1"
-                description="Household program List item"
-                defaultMessage="Supplemental Nutrition Assistance Program (SNAP)"
-            />
-          </li>
+          <ul className="usa-content-list">
+            <li>
+              <FormattedMessage
+                  id="app.slides.beforeYouBegin.eligibility1"
+                  description="Household program List item"
+                  defaultMessage="Supplemental Nutrition Assistance Program (SNAP)"
+              />
+            </li>
 
-          <li>
-            <FormattedMessage
-                id="app.slides.beforeYouBegin.eligibility2"
-                description="Household program List item"
-                defaultMessage="Temporary Assistasnce for Needy Families (TANF)"
-            />
-          </li>
+            <li>
+              <FormattedMessage
+                  id="app.slides.beforeYouBegin.eligibility2"
+                  description="Household program List item"
+                  defaultMessage="Temporary Assistasnce for Needy Families (TANF)"
+              />
+            </li>
 
-          <li>
-            <FormattedMessage
-                id="app.slides.beforeYouBegin.eligibility3"
-                description="Household program List item"
-                defaultMessage="Food Distribution Program on Indian Reservations (FDPIR)"
-            />
-          </li>
-        </ul>
+            <li>
+              <FormattedMessage
+                  id="app.slides.beforeYouBegin.eligibility3"
+                  description="Household program List item"
+                  defaultMessage="Food Distribution Program on Indian Reservations (FDPIR)"
+              />
+            </li>
+          </ul>
         </p>
         <p>
           <FormattedMessage
