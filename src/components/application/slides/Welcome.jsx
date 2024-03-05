@@ -28,11 +28,11 @@ class Welcome extends React.Component {
           <FormattedMessage
               id="app.slides.welcome.intro"
               description="Introductory paragraph."
-              defaultMessage="This is {stateName}'s 2025 Summer Electronic Benefit Transfer (EBT) Program for Children. If your household qualifies, you can receive a EBT card with money for {italicized} student."
+              defaultMessage="This is {stateName}'s {year} Summer Electronic Benefit Transfer (EBT) Program for Children. If your household qualifies, you can receive a EBT card with money for {italicized} student."
               values={{
                 italicized: (<i>each</i>),
                 stateName: organization.state,
-                usda: <abbr title="United States Department of Agriculture">USDA</abbr>
+                year: organization.year
               }}
           />
         </p>
