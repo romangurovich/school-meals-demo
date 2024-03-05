@@ -30,6 +30,17 @@ class Navigation extends Component {
     return (
       <Navbar fixedTop>
         <div className="usa-grid">
+          <Nav className="hidden-sm hidden-md hidden-lg" id="bootstrap-overrides-nav">
+            <NavItem eventKey={1} onClick={this.handleHelp} className="float-left">
+              <Glyphicon glyph="question-sign" className="help-icon" />&nbsp;
+              <FormattedMessage
+                  id="nav.help.head"
+                  description="Text for the Help navigation item."
+                  defaultMessage="Get Help"
+              />
+            </NavItem>
+            <LocalePicker pullRight localeData={localeData} locales={locales} className="float-right" />
+          </Nav>
           <Navbar.Header>
             <Navbar.Brand>
               <span className="hidden-xs">
@@ -53,9 +64,8 @@ class Navigation extends Component {
                 />
               </span>
             </Navbar.Brand>
-            <Navbar.Toggle />
           </Navbar.Header>
-          <Navbar.Collapse>
+          <Navbar.Collapse className="hidden-xs">
             <Nav pullRight>
               {/*
             <NavItem eventKey={2} onClick={this.handleData}>

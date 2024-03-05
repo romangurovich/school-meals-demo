@@ -64,10 +64,10 @@ class Welcome extends React.Component {
               defaultMessage="{bolded}, even if you have multiple children."
               values={{
                 bolded: <strong><FormattedMessage
-                id="app.slides.welcome.onlineInstructions.bolded"
-                description="Phrase"
-                defaultMessage="Only complete one application per household"
-            /></strong>
+                    id="app.slides.welcome.onlineInstructions.bolded"
+                    description="Phrase"
+                    defaultMessage="Only complete one application per household"
+                                /></strong>
               }}
           />
         </p>
