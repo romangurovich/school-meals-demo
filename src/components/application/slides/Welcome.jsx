@@ -61,9 +61,13 @@ class Welcome extends React.Component {
           <FormattedMessage
               id="app.slides.welcome.onlineInstructions"
               description="Instructions on how many to complete per household."
-              defaultMessage="{bolded} even if you have multiple children."
+              defaultMessage="{bolded}, even if you have multiple children."
               values={{
-                bolded: <strong>Only complete one application per household,</strong>
+                bolded: <strong><FormattedMessage
+                id="app.slides.welcome.onlineInstructions.bolded"
+                description="Phrase"
+                defaultMessage="Only complete one application per household"
+            /></strong>
               }}
           />
         </p>
