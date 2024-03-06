@@ -435,9 +435,10 @@
 
   "app.slides.welcome.header": "¡Bienvenidos!",
   "app.slides.welcome.nextButton": "Iniciar",
-  "app.slides.welcome.intro": "Esta es la solicitud electrónica del {organizationName} para obtener comidas gratis y a precio reducido mediante el Programa nacional de almuerzo escolar y el Programa de desayuno escolar del {usda} (United States Department of Agriculture, USDA).",
-  "app.slides.welcome.onlineInstructions": "Esta solicitud interactiva lo guiará durante el proceso de solicitud. Cuando esté listo para solicitar, haga clic en el botón “Iniciar” para empezar.",
-  "app.slides.welcome.paperInstructions": "Si desea presentar la {link}, puede imprimirla y completarla y luego enviarla a {address}.",
+  "app.slides.welcome.intro": "Esta es la solicitud electrónica para el Programa de Transferencia Electrónica de Beneficios (EBT) para niños de verano {year} de {stateName}. Si su hogar califica, puede recibir una tarjeta EBT con dinero para cada estudiante.",
+  "app.slides.welcome.onlineInstructions": "{bolded}, aún si tenga más que un niño.",
+  "app.slides.welcome.onlineInstructions.bolded": "Complete sólo una solicitud por casa",
+  "app.slides.welcome.paperInstructions": "Esta solicitud interactiva lo guiará durante el proceso de solicitud. Si prefiere presentar la {link}, puede completarla através del link, imprimirla  y luego enviarla a {address}.",
   "app.slides.welcome.paperApplication": "solicitud en papel",
 
   "help.title": "Ayuda",
