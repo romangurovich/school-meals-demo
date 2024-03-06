@@ -34,10 +34,17 @@ class Adults extends Component {
     const { adults } = this.props
     const attestors = adults.items.filter(person => person.isAttestor)
 
+    const headerText =
+      <FormattedMessage
+          id="app.slides.adults.header"
+          description="Text for the header of the slide."
+          defaultMessage="Other adults"
+      />
+
     return (
       <Slide
           nextDisabled={!adults.isValid} nextText={this.nextText}
-          id="adults" beginsSection
+          id="adults" beginsSection header={headerText}
       >
         <p className="usa-font-lead">
           <FormattedMessage
@@ -61,7 +68,14 @@ class Adults extends Component {
           <FormattedMessage
               id="app.slides.adults.remember"
               description="Remember Household definitions"
-              defaultMessage="Remember, for the purposes of applying for Summer EBT benefits, a household is a group of people, related or unrelated, that usually live together and share income and expenses."
+              defaultMessage="Remember, for the purposes of applying for Summer EBT benefits, a household is a {bolded}."
+              values={{
+                bolded: <strong><FormattedMessage
+                    id="app.slides.adults.remember.bolded"
+                    description="Defines what adults are"
+                    defaultMessage="a group of people, related or unrelated, that usually live together and share income and expenses"
+                                /></strong>
+              }}
           />
         </p>
         <p>
@@ -88,11 +102,6 @@ class Adults extends Component {
             />
           </li>
           <li>
-            <FormattedMessage
-                id="app.slides.adults.family.military"
-                description="military and deployed"
-                defaultMessage="Family members that are in the military and deployed"
-            />
             <FormattedMessage
                 id="app.slides.adults.family.military"
                 description="military and deployed"
