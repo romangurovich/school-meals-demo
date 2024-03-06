@@ -142,10 +142,14 @@ footer .not-real-disclaimer {
   background-color: #fff;
   padding: 3rem;
   border: 1px solid #d6d7d9;
+  
+  @media only screen and (max-device-width: 767px) {
+    margin-top: 80px;
+  }
 }
 
 .help-icon {
-  color: #e31c3d;
+  color: #09c855;
 }
 
 .show-progress .slide-content {
@@ -398,4 +402,12 @@ button.navbar-toggle:focus {
 
 .usa-input-error label {
   width: calc(100% + 1.9rem);
+}
+
+#bootstrap-overrides-nav > li:first-child {
+  float: left;
+}
+
+#bootstrap-overrides-nav > li.dropdown {
+  float: right;
 }
