@@ -30,23 +30,46 @@ class Attestation extends Component {
           <FormattedMessage
               id="app.slides.attestation.intro"
               description="Introductory paragraph."
-              defaultMessage="that all information on this application is true and that all income is reported."
+              defaultMessage="that all information I will provide on this application is true and that all income is reported."
+          />
+        </p>
+        <p>
+          <FormattedMessage
+              id="app.slides.attestation.inAddition"
+              description="Additional certification"
+              defaultMessage="In addition, I certify (promise) that I am not already receiving Summer EBT benefits in another State or ITO (Indian Tribal Organization)."
+          />
+        </p>
+        <p>
+          <FormattedMessage
+              id="app.slides.attestation.trueAndCorrect"
+              description="Certify truth and correctness"
+              defaultMessage="All information I will give in the application is true and correct."
           />
         </p>
         <p>
           <FormattedMessage
               id="app.slides.attestation.understand"
-              description="Understand that the information give should be correct."
-              defaultMessage="I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits."
+              description="Phrase"
+              defaultMessage="I understand that..."
           />
+          <ul className="usa-content-list">
+            <li>
+              <FormattedMessage
+                  id="app.slides.attestation.understanding1"
+                  description="Federal funds"
+                  defaultMessage="My application is being made in connection with the receipt of Federal funds."
+              />
+            </li>
+            <li>
+              <FormattedMessage
+                  id="app.slides.attestation.understanding2"
+                  description="Risk of revocation of benefits"
+                  defaultMessage="Summer EBT agencies may verify the information on the application, and that deliberate misrepresentation of the information may subject me to prosecution under applicable State and Federal criminal statutes."
+              />
+            </li>
+          </ul>
         </p>
-        <p><strong>
-          <FormattedMessage
-              id="app.slides.attestation.completingApp"
-              description="Name of individual completing app"
-              defaultMessage="Enter the name of the adult household member completing the application."
-          />
-        </strong></p>
 
         <Form>
           <Fieldset legend="Attestation">
@@ -58,7 +81,7 @@ class Attestation extends Component {
               <FormattedMessage
                   id="app.slides.attestation.firstName.label"
                   description="Field label."
-                  defaultMessage="First name"
+                  defaultMessage="First name (official name)*"
               />
             </InputField>
 
@@ -81,7 +104,7 @@ class Attestation extends Component {
               <FormattedMessage
                   id="app.slides.attestation.lastName.label"
                   description="Field label."
-                  defaultMessage="Last name"
+                  defaultMessage="Last names(s)*"
               />
             </InputField>
 
@@ -99,23 +122,16 @@ class Attestation extends Component {
             <InputField
                 name="date"
                 object={attestation}
-                disabled
+                required
             >
               <FormattedMessage
                   id="app.slides.attestation.date.label"
                   description="Field label."
-                  defaultMessage="Today's date"
+                  defaultMessage="Today's date*"
               />
             </InputField>
           </Fieldset>
         </Form>
-        <p><em>
-          <FormattedMessage
-              id="app.slides.attestation.misrepresentation"
-              description="Starred message that lying on the form is fraud."
-              defaultMessage="*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
-          />
-        </em></p>
       </Slide>
     )
   }
