@@ -5,6 +5,7 @@ import Form from './Form'
 import Fieldset from './Fieldset'
 import PersonAttributeInput from './PersonAttributeInput'
 import { FormattedMessage } from 'react-intl'
+import { Glyphicon } from 'react-bootstrap'
 
 @observer
 class PersonForm extends Component {
@@ -46,6 +47,8 @@ class PersonForm extends Component {
                     onClick={this.handleRemove}
                     className="usa-button-gray remove-person"
                 >
+                  <Glyphicon glyph="trash" />
+                  <span />
                   <FormattedMessage
                       id="app.personForm.removeButton"
                       description="Button to remove person from collection."
