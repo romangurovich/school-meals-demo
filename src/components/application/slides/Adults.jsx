@@ -75,8 +75,9 @@ class Adults extends Component {
           <FormattedMessage
               id="app.slides.adults.dont.forget"
               description="Don't Forget"
-              defaultMessage="Don't forget people who aren't currently living with you and are away on a temporary basis, like:"/>
-              
+              defaultMessage="Don't forget people who aren't currently living with you and are away on a temporary basis, like:"
+          />
+
         </p>
         <ul className="usa-content-list">
           <li>
@@ -89,20 +90,20 @@ class Adults extends Component {
           <li>
             <FormattedMessage
                 id="app.slides.adults.family.military"
-                description="military and deployed"     
+                description="military and deployed"
                 defaultMessage="Family members that are in the military and deployed"
             />
             <FormattedMessage
                 id="app.slides.adults.family.military"
-                description="military and deployed"     
+                description="military and deployed"
                 defaultMessage="Family members that are in the military and deployed"
             />
             <li>
-            <FormattedMessage
-                id="app.slides.adults.relatives"
-                description="relatives away"     
-                defaultMessage="Relatives who live with you much of the time but are away right now"
-            />
+              <FormattedMessage
+                  id="app.slides.adults.relatives"
+                  description="relatives away"
+                  defaultMessage="Relatives who live with you much of the time but are away right now"
+              />
             </li>
           </li>
         </ul>
