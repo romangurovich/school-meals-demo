@@ -23,6 +23,23 @@ export const organization = {
   }
 }
 
+export const schoolDistricts = {
+  'Camden County School District': [
+    'Grandy Primary',
+    'Camden Intermediate School',
+    'Camden Middle',
+    'Camden Early College High',
+    'Camden County High School'
+  ],
+  'Hyde County School District': [
+    'Mattamuskeet Elementary',
+    'Mattamuskeet Early College High School',
+    'Ocracoke School'
+  ]
+}
+
+export const grades = ['K', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+
 export const assistancePrograms = [
   'Supplemental Nutrition Assistance Program (SNAP)',
   'Temporary Assistance for Needy Families (TANF)',

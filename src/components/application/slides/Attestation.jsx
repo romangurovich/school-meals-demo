@@ -81,7 +81,7 @@ class Attestation extends Component {
               <FormattedMessage
                   id="app.slides.attestation.firstName.label"
                   description="Field label."
-                  defaultMessage="First name (official name)*"
+                  defaultMessage="First name (official name)"
               />
             </InputField>
 
@@ -104,7 +104,7 @@ class Attestation extends Component {
               <FormattedMessage
                   id="app.slides.attestation.lastName.label"
                   description="Field label."
-                  defaultMessage="Last names(s)*"
+                  defaultMessage="Last names(s)"
               />
             </InputField>
 
@@ -127,7 +127,7 @@ class Attestation extends Component {
               <FormattedMessage
                   id="app.slides.attestation.date.label"
                   description="Field label."
-                  defaultMessage="Today's date*"
+                  defaultMessage="Today's date"
               />
             </InputField>
           </Fieldset>

@@ -3,7 +3,7 @@ import shortid from 'shortid'
 import jQuery from 'jquery'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { FormattedMessage } from 'react-intl'
+// Import { FormattedMessage } from 'react-intl'
 
 @observer
 class InputField extends Component {
@@ -49,12 +49,15 @@ class InputField extends Component {
 
   render() {
     const input = this.props
-    const additional = input.additional || (
-      input.required && <FormattedMessage
-          id="app.inputField.required"
-          description="Text that indicates a field is required."
-          defaultMessage="required"
-                        />
+    // Const additional = input.additional || (
+    //   input.required && <FormattedMessage
+    //       id="app.inputField.required"
+    //       description="Text that indicates a field is required."
+    //       defaultMessage="required"
+    //                     />
+    // )
+    const requiredSpan = input.required && (
+      <span aria-label="required">*</span>
     )
     const value = input.object[input.name]
 
@@ -107,8 +110,9 @@ class InputField extends Component {
         {(input.label || this.props.children || input.required || input.additional) &&
         <label htmlFor={this.controlId}>
           {input.label || this.props.children}
-          {additional &&
-          <span className="usa-additional_text">{additional}</span>
+          {input.required && requiredSpan}
+          {input.additional &&
+          <span className="usa-additional_text">{input.additional}</span>
            }
         </label>
         }

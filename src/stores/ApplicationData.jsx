@@ -206,7 +206,7 @@ class PersonCollection {
   <FormattedMessage
       id="applicationData.person.firstName.label"
       description="The label used for form fields."
-      defaultMessage="First name"
+      defaultMessage="First name (official name)"
   />,
         required: true },
       { name: 'middleName',
@@ -222,7 +222,7 @@ class PersonCollection {
   <FormattedMessage
       id="applicationData.person.lastName.label"
       description="The label used for form fields."
-      defaultMessage="Last name"
+      defaultMessage="Last name(s)"
   />,
         required: true },
       { name: 'suffix',
@@ -453,13 +453,32 @@ class StudentCollection extends ChildCollection {
 
   get fields() {
     return super.fields.concat([
+      { name: 'birthday',
+        label:
+  <FormattedMessage
+      id="applicationData.student.birthday.label"
+      description="The label used for form fields."
+      defaultMessage="Birthdate (month/day/year)"
+  />,
+        required: true
+      },
+      { name: 'schoolDistrict',
+        label:
+  <FormattedMessage
+      id="applicationData.student.schoolDistrict.label"
+      description="The label used for form fields."
+      defaultMessage="School district"
+  />,
+        required: true
+      },
       { name: 'school',
         label:
   <FormattedMessage
       id="applicationData.student.school.label"
       description="The label used for form fields."
       defaultMessage="School"
-  />
+  />,
+        required: true
       },
       { name: 'grade',
         label:
@@ -467,7 +486,8 @@ class StudentCollection extends ChildCollection {
       id="applicationData.student.grade.label"
       description="The label used for form fields."
       defaultMessage="Grade"
-  />
+  />,
+        required: true
       }
     ])
   }
