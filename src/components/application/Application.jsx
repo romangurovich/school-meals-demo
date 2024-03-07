@@ -13,6 +13,7 @@ import Contact from './slides/Contact'
 import Demographics from './slides/Demographics'
 import Summary from './slides/Summary'
 import ThankYou from './slides/ThankYou'
+import Household from './slides/Household'
 
 @observer
 class Application extends Component {
@@ -33,6 +34,7 @@ class Application extends Component {
         <DocumentsYoullNeed />
         <Attestation attestation={attestation} attestor={adults.first} />
         <Students students={students} />
+        <Household />
         <AssistancePrograms applicationData={applicationData} />
 
         {assistancePrograms.hasAny !== true &&
