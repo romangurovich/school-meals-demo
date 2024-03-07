@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import DemographicsForm from './DemographicsForm'
-import { organization } from '../../../config'
 import { observer } from 'mobx-react'
 import { FormattedMessage } from 'react-intl'
 
@@ -12,16 +11,15 @@ class Demographics extends Component {
 
     return (
       <Slide id="optional">
-        <p className="usa-font-lead">
-          <FormattedMessage
-              id="app.slides.demographics.intro"
-              description="Introductory paragraph."
-              defaultMessage="This is an optional question for information we collect about students that attend school in {organizationName}."
-              values={{
-                organizationName: organization.name
-              }}
-          />
-        </p>
+        <strong>
+          <p className="usa-font-lead">
+            <FormattedMessage
+                id="app.slides.demographics.intro"
+                description="Introductory paragraph."
+                defaultMessage="This is an optional question"
+            />
+          </p>
+        </strong>
 
         <p>
           <FormattedMessage

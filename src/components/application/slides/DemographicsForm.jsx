@@ -9,6 +9,10 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class Demographics extends Component {
+  clearAll(student) {
+    student.demographics = { resetAll: true }
+  }
+
   render() {
     const { student } = this.props
     const radioProps = {
@@ -83,17 +87,19 @@ class Demographics extends Component {
                     defaultMessage="White"
                 />
               </Checkbox>
-            </Checkboxes>
-
-            <div>
-              <button className="usa-button-gray" type="reset">
+              <br />
+              { /* eslint-disable react/jsx-no-bind */ }
+              <Checkbox object={student.demographics} name="resetAll" onChange={() => this.clearAll(student)}>
                 <FormattedMessage
-                    id="app.slides.demographicsForm.clear"
-                    description="Clear"
-                    defaultMessage="Clear"
+                    id="app.slides.demographicsForm.resetAll"
+                    description="Prefer not to share info"
+                    defaultMessage="I prefer not to share {studentName}'s race and ethnicity"
+                    values={{
+                      studentName: informalName(student)
+                    }}
                 />
-              </button>
-            </div>
+              </Checkbox>
+            </Checkboxes>
           </div>
         </Form>
       </div>
