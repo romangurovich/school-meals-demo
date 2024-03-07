@@ -6,6 +6,8 @@ import Fieldset from '../Fieldset'
 import InputField from '../InputField'
 import { observer } from 'mobx-react'
 import { FormattedMessage } from 'react-intl'
+import Checkbox from '../Checkbox'
+import Checkboxes from '../Checkboxes'
 
 @observer
 class Contact extends Component {
@@ -32,39 +34,29 @@ class Contact extends Component {
       <Slide header={headerText} id="contact" beginsSection>
         <p className="usa-font-lead">
           <FormattedMessage
-              id="app.slides.contact.intro"
-              description="Introductory paragraph."
-              defaultMessage="Please enter your contact information so that we can reach you in case there are any issues with your application. This information is optional, but we strongly encourage you to provide it."
+              id="app.slides.contact.mailingAddress"
+              description="Mailing address"
+              defaultMessage="Mailing address"
+          />
+        </p>
+
+        <p>
+          <FormattedMessage
+              id="app.slides.contact.almostDone"
+              description="Almost done"
+              defaultMessage="You're almost done!"
+          />
+        </p>
+
+        <p>
+          <FormattedMessage
+              id="app.slides.contact.validAddress"
+              description="Note to enter valid address"
+              defaultMessage="Enter a valid mailing address where we can send you a Summer EBT debit card if you qualify."
           />
         </p>
 
         <Form large>
-          <InputField
-              name="phone"
-              type="tel"
-              pattern="( \d{3}- | \(\d{3}\) )?\d{3}-\d{4}"
-              object={contact}
-          >
-            <FormattedMessage
-                id="app.slides.contact.phone.label"
-                description="Field label."
-                defaultMessage="Phone number"
-            />
-          </InputField>
-
-          <InputField
-              name="email"
-              type="email"
-              pattern="^\S+@\S+\.\S+$"
-              object={contact}
-          >
-            <FormattedMessage
-                id="app.slides.contact.email.label"
-                description="Field label."
-                defaultMessage="Email"
-            />
-          </InputField>
-
           <Fieldset legend="Address">
             <InputField
                 name="address1"
@@ -73,7 +65,7 @@ class Contact extends Component {
               <FormattedMessage
                   id="app.slides.contact.address1.label"
                   description="Field label."
-                  defaultMessage="Street address 1"
+                  defaultMessage="Street address"
               />
             </InputField>
 
@@ -84,7 +76,7 @@ class Contact extends Component {
               <FormattedMessage
                   id="app.slides.contact.address2.label"
                   description="Field label."
-                  defaultMessage="Street address 2"
+                  defaultMessage="Apt. or suite"
               />
             </InputField>
 
@@ -181,7 +173,86 @@ class Contact extends Component {
                   defaultMessage="ZIP"
               />
             </InputField>
+
+            <p>
+              <Checkboxes legend="">
+                <Checkbox object={contact} name="hasNoAddress">
+                  <FormattedMessage
+                      id="app.slides.contact.hasNoAddress"
+                      description="Has no address or is moving soon"
+                      defaultMessage="Check this box if you don't have a current mailing address or are moving soon"
+                  />
+                </Checkbox>
+              </Checkboxes>
+            </p>
           </Fieldset>
+
+          <p className="usa-font-lead">
+            <FormattedMessage
+                id="app.slides.contact.additionalContactInfo"
+                description="Additional contact info"
+                defaultMessage="Additional contact info"
+            />
+          </p>
+
+          <p>
+            <FormattedMessage
+                id="app.slides.contact.optional"
+                description="Additional contact info is optional"
+                defaultMessage="{bolded} enter your email address and your phone number. This information gives us a quick way to:"
+                values={{
+                  bolded: <strong><FormattedMessage
+                      id="app.slides.contact.optional.bolded"
+                      description="Optional bolded"
+                      defaultMessage="Optional:"
+                                  /></strong>
+                }}
+            />
+            <ul className="usa-content-list">
+              <li>
+                <FormattedMessage
+                    id="app.slides.contact.optional.eligibility"
+                    description="Phrase"
+                    defaultMessage="Let you know about eligibility"
+                />
+              </li>
+              <li>
+                <FormattedMessage
+                    id="app.slides.contact.optional.followUp"
+                    description="Phrase"
+                    defaultMessage="Follow up with questions"
+                />
+              </li>
+            </ul>
+
+            <Fieldset>
+              <InputField
+                  name="phone"
+                  type="tel"
+                  pattern="( \d{3}- | \(\d{3}\) )?\d{3}-\d{4}"
+                  object={contact}
+              >
+                <FormattedMessage
+                    id="app.slides.contact.phone.label"
+                    description="Field label."
+                    defaultMessage="Phone number"
+                />
+              </InputField>
+
+              <InputField
+                  name="email"
+                  type="email"
+                  pattern="^\S+@\S+\.\S+$"
+                  object={contact}
+              >
+                <FormattedMessage
+                    id="app.slides.contact.email.label"
+                    description="Field label."
+                    defaultMessage="Email"
+                />
+              </InputField>
+            </Fieldset>
+          </p>
         </Form>
       </Slide>
     )
@@ -196,7 +267,8 @@ Contact.propTypes = {
     address2: PropTypes.string,
     city: PropTypes.string,
     state: PropTypes.string,
-    zip: PropTypes.string
+    zip: PropTypes.string,
+    hasNoAddress: PropTypes.boolean
   })
 }
 
