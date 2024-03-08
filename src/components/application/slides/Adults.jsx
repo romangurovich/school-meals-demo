@@ -44,7 +44,7 @@ class Adults extends Component {
     return (
       <Slide
           nextDisabled={!adults.isValid} nextText={this.nextText}
-          id="adults" beginsSection header={headerText}
+          id="adults" header={headerText}
       >
         <p className="usa-font-lead">
           <FormattedMessage

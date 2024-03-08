@@ -56,6 +56,7 @@ class Summary extends Component {
           nextText={nextText}
           nextDisabled={!this.isValid}
           id="summary"
+          beginsSection
       >
         <p className="usa-font-lead">
           <FormattedMessage
