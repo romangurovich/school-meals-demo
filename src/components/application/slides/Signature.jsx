@@ -5,7 +5,7 @@ import Checkbox from '../Checkbox'
 import Checkboxes from '../Checkboxes'
 import InputField from '../InputField'
 import { observer } from 'mobx-react'
-import { fullName } from '../../../helpers'
+import { informalName } from '../../../helpers'
 import { FormattedMessage } from 'react-intl'
 
 @observer
@@ -43,21 +43,40 @@ class Signature extends Component {
 
     return (
       <Slide id="ssn" nextDisabled={!this.isValid}>
-        <p className="usa-font-lead">
-          <FormattedMessage
-              id="app.slides.signature.almostDone"
-              description="Almost Done"
-              defaultMessage="Great, you are almost done!"
-          />
-        </p>
+        <strong>
+          <p>
+            <FormattedMessage
+                id="app.slides.signature.optional"
+                description="This questions is optional"
+                defaultMessage="This is an optional question for {adult}"
+                values={{
+                  adult: informalName(attestor)
+                }}
+            />
+          </p>
+        </strong>
+
         <p>
           <FormattedMessage
-              id="app.slides.signature.pleaseProvide"
-              description="Please Provide..."
-              defaultMessage="Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application {adult}. If that person does not have a Social Security number, please check the box below labeled 'No {ssn}.'"
+              id="app.slides.signature.yourSocial"
+              description="Provide your social"
+              defaultMessage="Please provide the last four digits of your Social Security number."
+          />
+        </p>
+
+        <p>
+          <FormattedMessage
+              id="app.slides.signature.noWorries"
+              description="US Law about no need to be a documented citizen"
+              defaultMessage="United States citizenship or immigration status are {bolded} conditions of eligibility for Summer EBT benefits.
+            The benefits received through Summer EBT programs are not subject to public charge consideration.
+            In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive Summer EBT benefits."
               values={{
-                adult: <strong>({fullName(attestor)})</strong>,
-                ssn: <abbr title="Social Security number">SSN</abbr>
+                bolded: <strong><FormattedMessage
+                    id="app.slides.signature.noWorries.bolded"
+                    description="The word 'not' bolded"
+                    defaultMessage="not"
+                                /></strong>
               }}
           />
         </p>
@@ -74,7 +93,7 @@ class Signature extends Component {
               pattern="^\d{4}$"
               onChange={this.handleSsnChange}
           />
-
+          <br />
           <Checkboxes legend="No <abbr title='Social Security number'>SSN</abbr>">
             <Checkbox
                 object={signature}
@@ -84,23 +103,12 @@ class Signature extends Component {
               <FormattedMessage
                   id="app.slides.signature.noSSN"
                   description="No SSN"
-                  defaultMessage="No SSN"
+                  defaultMessage="I prefer not to share this information"
               />
 
             </Checkbox>
           </Checkboxes>
         </Form>
-
-        <p>
-          <small>
-            <FormattedMessage
-                id="app.slides.signature.note"
-                description="Note: on eligibility"
-                defaultMessage=" Note: United States citizenship or immigration status is not a condition of eligibility for free and reduced price benefits. The non-cash benefits received through the school meal programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits."
-            />
-          </small>
-        </p>
-
       </Slide>
     )
   }
