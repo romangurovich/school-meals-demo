@@ -417,3 +417,9 @@ button.navbar-toggle:focus {
 #bootstrap-overrides-nav > li.dropdown {
   float: right;
 }
+
+.info-cluster {
+  line-height: 0.94;
+  margin-top: .3em;
+  margin-bottom: 0;
+}
