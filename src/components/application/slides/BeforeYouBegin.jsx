@@ -26,7 +26,7 @@ class BeforeYouBegin extends React.Component {
       <FormattedMessage
           id="app.slides.beforeYouBegin.header"
           description="Text for the header of the slide."
-          defaultMessage="Before you begin…"
+          defaultMessage="Before you begin"
       />
 
     return (
@@ -35,7 +35,10 @@ class BeforeYouBegin extends React.Component {
           <FormattedMessage
               id="app.slides.beforeYouBegin.householdPrograms"
               description="Note that you can skip most of application with previous participation in a household program."
-              defaultMessage="You should not have to submit an application if someone in your household participates in:"
+              defaultMessage="{bolded} if someone in your household participates in:"
+              values={{
+                bolded: (<strong>You should not have to submit an application</strong>)
+              }}
           />
           <ul className="usa-content-list">
             <li>
@@ -50,7 +53,7 @@ class BeforeYouBegin extends React.Component {
               <FormattedMessage
                   id="app.slides.beforeYouBegin.eligibility2"
                   description="Household program List item"
-                  defaultMessage="Temporary Assistasnce for Needy Families (TANF)"
+                  defaultMessage="Temporary Assistance for Needy Families (TANF)"
               />
             </li>
 
@@ -67,9 +70,10 @@ class BeforeYouBegin extends React.Component {
           <FormattedMessage
               id="app.slides.beforeYouBegin.oneApplication"
               description="Only need one application for your household"
-              defaultMessage="We need only one application for all the children in your household that attend school in {organizationName}."
+              defaultMessage="Participation in these programs means you should automatically receive Summer EBT benefits in summer {year}."
               values={{
-                organizationName: organization.name
+                organizationName: organization.name,
+                year: organization.year
               }}
           />
         </p>

@@ -176,7 +176,8 @@
 
   "app.slides.beforeYouBegin.header": "Antes de empezar",
   "app.slides.beforeYouBegin.subheading": "debe saber algunas cosas",
-  "app.slides.beforeYouBegin.householdPrograms": "Si recibió una {tooltip}  de parte de la escuela en la que le informaron que sus hijos estaban aprobados automáticamente (directamente certificados) para obtener comidas gratis para el año escolar {schoolYear} porque algún miembro de su hogar participa en {assistanceProgramList}, entonces no necesita enviar la solicitud.",
+  "app.slides.beforeYouBegin.householdPrograms": "{bolded} Si recibió una {tooltip}  de parte de la escuela en la que le informaron que sus hijos estaban aprobados automáticamente (directamente certificados) para obtener comidas gratis para el año escolar {schoolYear} porque algún miembro de su hogar participa en {assistanceProgramList}, entonces no necesita enviar la solicitud.",
+  "app.slides.beforeYouBegin.householdPrograms.bolded": "",
   "app.slides.beforeYouBegin.letter": "carta",
   "app.slides.beforeYouBegin.oneApplication": "Necesitamos solo una solicitud para todos los niños de su hogar que asistan a la esculela en {organizationName}",
   "app.slides.beforeYouBegin.eligibility": "La elegibilidad",
