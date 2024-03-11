@@ -476,7 +476,7 @@ class StudentCollection extends ChildCollection {
   <FormattedMessage
       id="applicationData.student.school.label"
       description="The label used for form fields."
-      defaultMessage="School"
+      defaultMessage="School name"
   />,
         required: true
       },
