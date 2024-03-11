@@ -34,7 +34,7 @@ class ChildIncomeOverview extends Component {
     return (
       <Slide nextDisabled={!this.isValid} id="child-income">
 
-        <p className="usa-font-lead">
+        <p>
           <FormattedMessage
               id="app.slides.childIncomeOverview.intro"
               description="Introductory paragraph."
@@ -58,15 +58,15 @@ class ChildIncomeOverview extends Component {
           <li>
             <FormattedMessage
                 id="app.slides.childIncomeOverview.fullOrPartJob"
-                description="Full-/part-time job"
-                defaultMessage="a full-time or part-time job,"
+                description="Full or part-time job"
+                defaultMessage="a full or part-time job,"
             />
           </li>
           <li>
             <FormattedMessage
-                id="app.slides.childIncomeOverview.socialSecurity"
-                description="Social Security"
-                defaultMessage="Supplemental Security Income {socialSecurity}, if the child is disabled, {beneficiary} benefits for children of a disabled, retired, or deceased parent,"
+                id="app.slides.childIncomeOverview.ssi"
+                description="SSI"
+                defaultMessage="Supplemental Security Income {socialSecurity}, if the child is disabled"
                 values={{
                   socialSecurity: <Tooltip text={tooltiptext.ssiChildren}>
                     <FormattedMessage
@@ -74,7 +74,17 @@ class ChildIncomeOverview extends Component {
                         description="social"
                         defaultMessage="(SSI)"
                     />
-                  </Tooltip>,
+                  </Tooltip>
+                }}
+            />
+          </li>
+          <li>
+            <FormattedMessage
+                id="app.slides.childIncomeOverview.socialSecurity"
+                description="Social Security"
+                defaultMessage="Social Security benefits for children of a disabled, retired, or deceased parent"
+                values={{
+                  socialSecurity: <Tooltip text={tooltiptext.ssiChildren} />,
                   beneficiary: <Tooltip text={tooltiptext.ssSurvivor}>
                     <FormattedMessage
                         id="app.slides.childIncomeOverview.benefit"
@@ -90,7 +100,7 @@ class ChildIncomeOverview extends Component {
             <FormattedMessage
                 id="app.slides.childIncomeOverview.money"
                 description="money regularly received"
-                defaultMessage="money regularly received from extended family or friends outside the household, or"
+                defaultMessage="money regularly received from extended family or friends outside the household"
             />
           </li>
           <li>
@@ -129,7 +139,7 @@ class ChildIncomeOverview extends Component {
           <FormattedMessage
               id="app.slides.childIncomeOverview.exclusions"
               description="Message about which types of child income to exclude from reporting."
-              defaultMessage="Do not include infrequent earnings, such as income from occasional baby-sitting or mowing lawns."
+              defaultMessage="Do not include infrequent earnings, such as income from occasional babysitting or mowing lawns."
           />
         </p>
 
@@ -142,7 +152,7 @@ class ChildIncomeOverview extends Component {
             <FormattedMessage
                 id="app.slides.childIncomeOverview.label"
                 description="Question asking if child has income sources."
-                defaultMessage="Does {child} have income from any of these, or any other, sources?"
+                defaultMessage="Does {child} have income from any of these or other sources?"
                 values={{
                   child: <strong>{informalName(child)}</strong>
                 }}

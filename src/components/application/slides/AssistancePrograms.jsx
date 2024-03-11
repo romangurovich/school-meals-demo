@@ -21,7 +21,7 @@ class AssistancePrograms extends Component {
     return (
       <Slide
           id="assistance-programs"
-          nextDisabled={!assistancePrograms.isValid} beginsSection
+          nextDisabled={!assistancePrograms.isValid}
       >
         <p className="usa-font-lead">
           <FormattedMessage

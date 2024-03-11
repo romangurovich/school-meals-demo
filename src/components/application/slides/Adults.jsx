@@ -34,23 +34,30 @@ class Adults extends Component {
     const { adults } = this.props
     const attestors = adults.items.filter(person => person.isAttestor)
 
+    const headerText =
+      <FormattedMessage
+          id="app.slides.adults.header"
+          description="Text for the header of the slide."
+          defaultMessage="Other adults"
+      />
+
     return (
       <Slide
           nextDisabled={!adults.isValid} nextText={this.nextText}
-          id="adults" beginsSection
+          id="adults" header={headerText}
       >
         <p className="usa-font-lead">
           <FormattedMessage
               id="app.slides.adults.adultsInto"
               description="Intro Paragraph"
-              defaultMessage="Okay, now let’s talk about the adults in your household."
+              defaultMessage=" let’s talk about the adults in your household."
           />
         </p>
         <p>
           <FormattedMessage
               id="app.slides.adults.notIncluding"
               description="What other adults live in household"
-              defaultMessage="Not including {attestor}, what other adults live in the household?"
+              defaultMessage="Not including {attestor}, what other adults live in your household?"
               values={{
                 attestor: <Link id="attestation">{informalName(attestors[0])}</Link>
               }}
@@ -61,49 +68,54 @@ class Adults extends Component {
           <FormattedMessage
               id="app.slides.adults.remember"
               description="Remember Household definitions"
-              defaultMessage="Remember, for the purposes of applying for school meal benefits, a household is defined as a group of people, related or unrelated, that usually live together and share income and expenses. Don't forget about:"
+              defaultMessage="Remember, for the purposes of applying for Summer EBT benefits, a household is a {bolded}."
+              values={{
+                bolded: <strong><FormattedMessage
+                    id="app.slides.adults.remember.bolded"
+                    description="Defines what adults are"
+                    defaultMessage="a group of people, related or unrelated, that usually live together and share income and expenses"
+                                /></strong>
+              }}
           />
+        </p>
+        <p>
+          <FormattedMessage
+              id="app.slides.adults.be.sure.to"
+              description="Be sure to"
+              defaultMessage="Be sure to include grandparents or extended family members who live with you."
+          />
+        </p>
+        <p>
+          <FormattedMessage
+              id="app.slides.adults.dont.forget"
+              description="Don't Forget"
+              defaultMessage="Don't forget people who aren't currently living with you and are away on a temporary basis, like:"
+          />
+
         </p>
         <ul className="usa-content-list">
           <li>
             <FormattedMessage
-                id="app.slides.adults.grandparents"
-                description="Grandparents or extended family"
-                defaultMessage="grandparents or other extended family members that are living with you"
+                id="app.slides.adults.kids"
+                description="Kids over 18"
+                defaultMessage="Kids (over 18) who are away at college"
             />
           </li>
           <li>
             <FormattedMessage
-                id="app.slides.adults.alsoInclude"
-                description="Also include people not living there right now"
-                defaultMessage="Also include people that are not currently living with you, but are only away on a temporary basis, like:"
+                id="app.slides.adults.family.military"
+                description="military and deployed"
+                defaultMessage="Family members that are in the military and deployed"
             />
-            <ul>
-              <li>
-                <FormattedMessage
-                    id="app.slides.adults.collegeKids"
-                    description="college kids"
-                    defaultMessage="kids that are away at college,"
-                />
-              </li>
-              <li>
-                <FormattedMessage
-                    id="app.slides.adults.military"
-                    description="deployed military"
-                    defaultMessage="members of your family that are in the military, and are deployed"
-                />
-              </li>
-            </ul>
+            <li>
+              <FormattedMessage
+                  id="app.slides.adults.relatives"
+                  description="relatives away"
+                  defaultMessage="Relatives who live with you much of the time but are away right now"
+              />
+            </li>
           </li>
         </ul>
-
-        <p><strong>
-          <FormattedMessage
-              id="app.slides.adults.includeRegardless"
-              description="Include people regardless of age or income"
-              defaultMessage="Include people regardless of age or whether they earn or receive income."
-          />
-        </strong></p>
 
         <PersonCollection
             collection={adults}

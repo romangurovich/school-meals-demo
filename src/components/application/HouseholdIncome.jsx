@@ -5,7 +5,6 @@ import OtherChildren from './slides/OtherChildren'
 import ChildIncome from './slides/ChildIncome'
 import Adults from './slides/Adults'
 import AdultIncome from './slides/AdultIncome'
-import Signature from './slides/Signature'
 
 @observer
 class HouseholdIncome extends Component {
@@ -32,8 +31,7 @@ class HouseholdIncome extends Component {
     const {
       students,
       otherChildren,
-      adults,
-      signature
+      adults
     } = this.props.applicationData
 
     return (
@@ -46,7 +44,6 @@ class HouseholdIncome extends Component {
         <ChildIncome allChildren={this.allChildren} />
         <Adults adults={adults} />
         <AdultIncome adults={adults} />
-        <Signature attestor={adults.first} signature={signature} />
       </div>
     )
   }

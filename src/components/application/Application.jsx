@@ -13,6 +13,8 @@ import Contact from './slides/Contact'
 import Demographics from './slides/Demographics'
 import Summary from './slides/Summary'
 import ThankYou from './slides/ThankYou'
+import Household from './slides/Household'
+import Signature from './slides/Signature'
 
 @observer
 class Application extends Component {
@@ -23,7 +25,8 @@ class Application extends Component {
       students,
       contact,
       adults,
-      assistancePrograms
+      assistancePrograms,
+      signature
     } = applicationData
 
     return (
@@ -33,6 +36,7 @@ class Application extends Component {
         <DocumentsYoullNeed />
         <Attestation attestation={attestation} attestor={adults.first} />
         <Students students={students} />
+        <Household />
         <AssistancePrograms applicationData={applicationData} />
 
         {assistancePrograms.hasAny !== true &&
@@ -41,6 +45,7 @@ class Application extends Component {
 
         <Contact contact={contact} />
         <Demographics students={students} />
+        <Signature attestor={adults.first} signature={signature} />
         <LegalStatements />
         <Summary applicationData={this.props.applicationData} />
         <ThankYou applicationData={this.props.applicationData} />

@@ -154,6 +154,9 @@ footer .not-real-disclaimer {
 
 .show-progress .slide-content {
   margin-top: 110px;
+  @media only screen and (max-device-width: 767px) {
+    margin-top: 140px;
+  }
 }
 
 .person-form {
@@ -176,6 +179,9 @@ footer .not-real-disclaimer {
 
 .show-progress .progress-container {
   top: 50px;
+  @media only screen and (max-device-width: 767px) {
+    top: 90px;
+  }
 }
 
 .slide-content footer {
@@ -410,4 +416,10 @@ button.navbar-toggle:focus {
 
 #bootstrap-overrides-nav > li.dropdown {
   float: right;
+}
+
+.info-cluster {
+  line-height: 0.94;
+  margin-top: .3em;
+  margin-bottom: 0;
 }

@@ -12,18 +12,18 @@ const LegalStatements = () => {
 
   return (
     <Slide header={headerText} id="legal-statements">
-      <p className="usa-font-lead">
+      <p>
         <FormattedMessage
             id="app.slides.legalStatements.almostDone"
             description="Almost done"
-            defaultMessage="Almost done! Please read and acknowledge the following legal statements."
+            defaultMessage="Click continue after reading the following legal statements to complete the  application."
         />
       </p>
       <h2>
         <FormattedMessage
             id="app.slides.legalStatements.useOfStatement"
             description="{usda} Use of info statement"
-            defaultMessage="Use of Information Statement"
+            defaultMessage="USDA Use of Information Statement"
             values={{
               usda: <abbr title="United States Department of Agriculture">USDA</abbr>
             }}
@@ -33,14 +33,7 @@ const LegalStatements = () => {
         <FormattedMessage
             id="app.slides.legalStatements.nationalSchoolLunchAct"
             description="National School Lunch Act"
-            defaultMessage="The Richard B. Russell National School Lunch Act requires the information on this application. You do not have to give the information, but if you do not submit all needed information, we cannot approve your child for free or reduced price meals. You must include the last four digits of the social security number of the adult household member who signs the application. The social security number is not required when you apply on behalf of a foster child or you list a Supplemental Nutrition Assistance Program (SNAP), Temporary Assistance for Needy Families (TANF) Program or Food Distribution Program on Indian Reservations (FDPIR) case number or other FDPIR identifier for your child or when you indicate that the adult household member signing the application does not have a social security number. We will use your information to determine if your child is eligible for free or reduced price meals, and for administration and enforcement of the lunch and breakfast programs."
-        />
-      </p>
-      <p>
-        <FormattedMessage
-            id="app.slides.legalStatements.shareInfo"
-            description="tool may share info"
-            defaultMessage="We may share your eligibility information with education, health, and nutrition programs to help them evaluate, fund, or determine benefits for their programs, auditors for program reviews, and law enforcement officials to help them look into violations of program rules."
+            defaultMessage="The Richard B. Russell National School Lunch Act requires that we use information from this application to determine who qualifies for Summer EBT benefits. We can only approve complete forms. We may share your eligibility information with education, health, and nutrition programs to help them deliver program benefits to your household. Inspectors and law enforcement may also use your information to make sure that program rules are met. Some children qualify for Summer EBT without an application. Please contact your State or ITO to get Summer EBT for a foster child, and children who are homeless, migrant, or runaway."
         />
       </p>
 
@@ -58,17 +51,14 @@ const LegalStatements = () => {
         <FormattedMessage
             id="app.slides.legalStatements.fedCivilRights"
             description="Civil rights paragraph"
-            defaultMessage="In accordance with Federal civil rights law and U.S. Department of Agriculture USDA civil rights regulations and policies, the USDA, its Agencies, offices, and employees, and institutions participating in or administering USDA programs are prohibited from discriminating based on race, color, national origin, sex, disability, age, or reprisal or retaliation for prior civil rights activity in any program or activity conducted or funded by USDA."
-            values={{
-              usda: <abbr title="United States Department of Agriculture">USDA</abbr>
-            }}
+            defaultMessage="In accordance with federal civil rights law and U.S. Department of Agriculture (USDA) civil rights regulations and policies, this institution is prohibited from discriminating on the basis of race, color, national origin, sex (including gender identity and sexual orientation), disability, age, or reprisal or retaliation for prior civil rights activity."
         />
       </p>
       <p>
         <FormattedMessage
             id="app.slides.legalStatements.disabilities"
             description="Persons with disabilities"
-            defaultMessage="Persons with disabilities who require alternative means of communication for program information (e.g. Braille, large print, audiotape, American Sign Language, etc.), should contact the Agency (State or local) where they applied for beneﬁts. Individuals who are deaf, hard of hearing or have speech disabilities may contact USDA through the Federal Relay Service at (800) 877-8339. Additionally, program information may be made available in languages other than English."
+            defaultMessage="Program information may be made available in languages other than English. Persons with disabilities who require alternative means of communication to obtain program information (e.g., Braille, large print, audiotape, American Sign Language), should contact the responsible state or local agency that administers the program or USDA’s TARGET Center at (202) 720-2600 (voice and TTY) or contact USDA through the Federal Relay Service at (800) 877-8339."
             values={{
               usda: <abbr title="United States Department of Agriculture">USDA</abbr>
             }}
@@ -78,11 +68,51 @@ const LegalStatements = () => {
         <FormattedMessage
             id="app.slides.legalStatements.fileComplaint"
             description="to file a complaint..."
-            defaultMessage="To ﬁle a program complaint of discrimination, complete the USDA Program Discrimination Complaint Form, (AD-3027) found online at: http://www.ascr.usda.gov/complaint_ﬁling_cust.html, and at any USDA office, or write a letter addressed to USDA and provide in the letter all of the information requested in the form. To request a copy of the complaint form, call (866) 632-9992. Submit your completed form or letter to USDA by: (1) mail: U.S. Department of Agriculture, Office of the Assistant Secretary for Civil Rights, 1400 Independence Avenue, SW, Washington, D.C. 20250-9410; (2) fax: (202) 690-7442; or (3) email: program.intake@usda.gov."
+            defaultMessage="To file a program discrimination complaint, a Complainant should complete a Form AD-3027, USDA Program Discrimination Complaint Form which can be obtained online at: {link}, from any USDA office, by calling (866) 632-9992, or by writing a letter addressed to USDA. The letter must contain the complainant’s name, address, telephone number, and a written description of the alleged discriminatory action in sufficient detail to inform the Assistant Secretary for Civil Rights (ASCR) about the nature and date of an alleged civil rights violation. The completed AD-3027 form or letter must be submitted to USDA by:"
             values={{
-              usda: <abbr title="United States Department of Agriculture">USDA</abbr>
+              link: <a href="https://www.usda.gov/sites/default/files/documents/ad-3027.pdf">
+                https://www.usda.gov/sites/default/files/documents/ad-3027.pdf
+              </a>
             }}
         />
+        <ol className="usa-list">
+          <li>
+            <strong><FormattedMessage
+                id="app.slides.legalStatements.mail"
+                description="Mail"
+                defaultMessage="mail"
+                    /></strong>
+            <p className="info-cluster">
+              U.S. Department of Agriculture Office of the Assistant Secretary for Civil Rights
+            </p>
+            <p className="info-cluster">
+              1400 Independence Avenue, SW
+            </p>
+            <p className="info-cluster">
+              Washington, D.C. 20250-9410
+            </p>
+          </li>
+          <li>
+            <strong><FormattedMessage
+                id="app.slides.legalStatements.fax"
+                description="Fax"
+                defaultMessage="fax"
+                    /></strong>
+            <p className="info-cluster">
+              (833) 256-1665 or (202) 690-7442
+            </p>
+          </li>
+          <li>
+            <strong><FormattedMessage
+                id="app.slides.legalStatements.email"
+                description="Email"
+                defaultMessage="email"
+                    /></strong>
+            <p className="info-cluster">
+              <a href="mailto:Program.Intake@usda.gov">Program.Intake@usda.gov</a>
+            </p>
+          </li>
+        </ol>
       </p>
       <p>
         <FormattedMessage

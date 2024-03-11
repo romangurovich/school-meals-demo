@@ -60,58 +60,56 @@ class Progress extends Component {
     const result = []
 
     result.push({
-      'data-hash': 'welcome',
+      'data-hash': 'get-started',
       'title': <FormattedMessage
-          id="progress.begin"
-          description="Text for the Begin progress bar step."
-          defaultMessage="Begin"
+          id="progress.getStarted"
+          description="Text for the Get Started progress bar step."
+          defaultMessage="Get Started"
                />
     })
 
     result.push({
-      'data-hash': 'students',
+      'data-hash': 'household',
       'title': <FormattedMessage
-          id="progress.students"
-          description="Text for the Students progress bar step."
-          defaultMessage="Students"
+          id="progress.household"
+          description="Text for the Household progress bar step."
+          defaultMessage="Household"
                />
     })
 
     result.push({
-      'data-hash': 'assistance-programs',
+      'data-hash': 'income',
       'title': <FormattedMessage
-          id="progress.assistancePrograms"
-          description="Text for the Programs progress bar step."
-          defaultMessage="Programs"
+          id="progress.income"
+          description="Text for the Income progress bar step."
+          defaultMessage="Income"
                />
     })
 
-    if (this.props.applicationData.showHousehold) {
-      result.push({
-        'data-hash': 'other-children',
-        'title': <FormattedMessage
-            id="progress.otherKids"
-            description="Text for the Other Kids progress bar step."
-            defaultMessage="Other Kids"
-                 />
-      })
-
-      result.push({
-        'data-hash': 'adults',
-        'title': <FormattedMessage
-            id="progress.adults"
-            description="Text for the Adults progress bar step."
-            defaultMessage="Adults"
-                 />
-      })
-    }
+    result.push({
+      'data-hash': 'income',
+      'title': <FormattedMessage
+          id="progress.income"
+          description="Text for the Income progress bar step."
+          defaultMessage="Income"
+               />
+    })
 
     result.push({
-      'data-hash': 'summary',
+      'data-hash': 'last-steps',
       'title': <FormattedMessage
-          id="progress.summary"
-          description="Text for the Summary progress bar step."
-          defaultMessage="Summary"
+          id="progress.lastSteps"
+          description="Text for the Last Steps progress bar step."
+          defaultMessage="Last Steps"
+               />
+    })
+
+    result.push({
+      'data-hash': 'complete',
+      'title': <FormattedMessage
+          id="progress.complete"
+          description="Text for the Complete progress bar step."
+          defaultMessage="Complete!"
                />
     })
 
