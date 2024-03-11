@@ -3,6 +3,7 @@ import { observer } from 'mobx-react'
 
 import Welcome from './slides/Welcome'
 import BeforeYouBegin from './slides/BeforeYouBegin'
+import GettingReady from './slides/GettingReady'
 import DocumentsYoullNeed from './slides/DocumentsYoullNeed'
 import LegalStatements from './slides/LegalStatements'
 import Attestation from './slides/Attestation'
@@ -33,6 +34,7 @@ class Application extends Component {
       <div>
         <Welcome />
         <BeforeYouBegin />
+        <GettingReady />
         <DocumentsYoullNeed />
         <Attestation attestation={attestation} attestor={adults.first} />
         <Students students={students} />
