@@ -75,6 +75,12 @@ class Foster extends Component {
 
   render() {
     const { allPeopleCollections, students } = this.props.applicationData
+    const headerText =
+    <FormattedMessage
+        id="app.slides.foster.header"
+        description="Text for the header of the slide."
+        defaultMessage="Other programs"
+    />
     const studentCount = students.length
     const props = {
       students: students.items,
@@ -94,12 +100,12 @@ class Foster extends Component {
     }
 
     return (
-      <Slide nextDisabled={!this.isValid} id="foster">
-        <p className="usa-font-lead">
+      <Slide nextDisabled={!this.isValid} id="foster" header={headerText}>
+        <p>
           <FormattedMessage
               id="app.slides.foster.confirm"
-              description="No problem."
-              defaultMessage="No problem! There are other ways to qualify."
+              description="Other ways to qualify."
+              defaultMessage="There are  other ways to quality for Summer EBT benefits."
           />
 
         </p>

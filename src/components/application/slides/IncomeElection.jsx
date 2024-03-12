@@ -101,6 +101,12 @@ class IncomeElection extends Component {
 
   render() {
     const { applicationData } = this.props
+    const headerText =
+    <FormattedMessage
+        id="app.slides.incomeElection.header"
+        description="Text for the header of the slide."
+        defaultMessage="Your child is probably eligible"
+    />
     const allStudents = applicationData.students
     const programSlugs = [
       'isHomeless',
@@ -113,7 +119,7 @@ class IncomeElection extends Component {
     })
 
     return (
-      <Slide nextDisabled={!this.isValid} id="income-election">
+      <Slide nextDisabled={!this.isValid} id="income-election" header={headerText}>
 
         <p className="usa-font-lead">
           <FormattedMessage
@@ -133,7 +139,15 @@ class IncomeElection extends Component {
           <FormattedMessage
               id="app.slides.incomeElection.confirmWithStaff"
               description="Need to confirm with program staff"
-              defaultMessage="We just need to confirm that with program staff. If we are unable to do that, you will need to submit an application with income information to determine your benefit level."
+              defaultMessage="We need to confirm that with program staff. If we are unable to do that, you will need to submit an application with income information to determine your benefit level."
+          />
+        </p>
+
+        <p>
+          <FormattedMessage
+              id="app.slides.incomeElection.recommendIncomeInformation"
+              description="Recommend entering income information."
+              defaultMessage="We recommend entering income information, just in case."
           />
         </p>
 
@@ -141,7 +155,7 @@ class IncomeElection extends Component {
           <FormattedMessage
               id="app.slides.incomeElection.chooseFollowing"
               description="Label for the following radio buttons"
-              defaultMessage="Please choose one of the following:"
+              defaultMessage="What would you like to do?"
           />
         </label>
 
@@ -154,13 +168,13 @@ class IncomeElection extends Component {
               <FormattedMessage
                   id="app.slides.incomeElection.electToProvideIncome.trueLabel"
                   description="Option to provide household income now."
-                  defaultMessage="Provide income information now"
+                  defaultMessage="Continue to enter income information"
               />}
             falseLabel={
               <FormattedMessage
                   id="app.slides.incomeElection.electToProvideIncome.falseLabel"
                   description="Option to not provide household income now."
-                  defaultMessage="Submit my application without income information"
+                  defaultMessage="Apply without income information"
               />}
         />
       </Slide>
