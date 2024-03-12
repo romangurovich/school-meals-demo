@@ -157,11 +157,14 @@
   "app.slides.adults.label": "Adulto",
   "app.slides.adults.nextText": "No hay otros adultos",
 
+  "app.slides.assistancePrograms.header": "Programas",
   "app.slides.assistancePrograms.intro": "Si alguien en su hogar participa en {snap}, {tanf}, o {fdpir}, {studentList} {studentCount, plural, one {es elegible} other {son elegibles}} para recibir comidas escolares gratis.",
   "app.slides.assistancePrograms.household": "Un hogar se define como un grupo de personas, relacionadas o no relacionadas que suelen vivir juntas y que comparten ingresos y gastos.",
   "app.slides.assistancePrograms.householdIncludes": "Esto incluye a los abuelos o a otros miembros de la familia extendida que vivan con usted. También incluye a las personas que no viven con usted actualmente, pero que viven lejos de manera temporal, como hijos que se han ido a la universidad. Incluye a personas sin importar la edad o si ganan o reciben ingresos.",
   "app.slides.assistancePrograms.whoToInclude": "Si necesita obtener información detallada, consulte la pregunta ‘¿A QUIÉN DEBO INCLUIR EN MI HOGAR?’ en la sección de ayuda.",
   "app.slides.assistancePrograms.followingPrograms": "Si alguna persona de su hogar (usted incluido) participa actualmente en alguno de los siguientes programas, marque las casillas que se encuentran a continuación. Si no participa en ninguno, presione continuar.",
+
+  "app.slides.assistanceProgram.noCaseNumber": "",
 
   "app.slides.attestation.header": "Certifico (prometo)...",
   "app.slides.attestation.intro": "que toda la información que proporcionaré en esta solicitud es verdadera y que reportaré todos los ingresos.",
@@ -188,7 +191,7 @@
   "app.slides.beforeYouBegin.householdIncomeWaiver.bolded": "es probable que no sea necesario completar una solicitud",
   "app.slides.beforeYouBegin.ineligible": "Si su niño es educado en casa o asiste a una escuela que no participa en un programa Nacional de Almuerzos Escolares (NSLP), no es elegible para los beneficios de EBT de verano.",
   "app.slides.beforeYouBegin.moving": "Si planea mudarse de casa o se ha mudado a un estado nuevo recientemente, debe solicitar beneficos en el estado donde su niño completará o ya se ha completado el año escolar.",
-  
+
   "app.slides.beforeYouBegin.status": "Su {tooltip} no afecta su elegibilidad para obtener beneficios de comidas gratis o a precio reducido",
   "app.slides.beforeYouBegin.usStatus": "ciudadanía en los EE. UU. o estado de inmigración",
   "app.slides.beforeYouBegin.questions": "Para cualquier pregunta mientras completa la solicitud, haga clic en el icono de signo de interrogación o en 'Ayuda'. También puede colocar el curso sobre algunas palabras para ver las definiciones.",

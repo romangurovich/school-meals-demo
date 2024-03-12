@@ -98,7 +98,7 @@ class Attestation extends Component {
               <FormattedMessage
                   id="app.slides.attestation.lastName.label"
                   description="Field label."
-                  defaultMessage="Last names(s)"
+                  defaultMessage="Last name(s)"
               />
             </InputField>
 
