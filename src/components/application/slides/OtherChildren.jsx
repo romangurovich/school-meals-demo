@@ -29,7 +29,7 @@ class OtherChildren extends Component {
     return (
       <Slide
           nextDisabled={!otherChildren.isValid} nextText={this.nextText}
-          id="other-children" beginsSection
+          id="other-children"
       >
 
         <p className="usa-font-lead">
