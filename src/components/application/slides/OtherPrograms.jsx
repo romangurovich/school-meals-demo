@@ -45,11 +45,11 @@ class OtherPrograms extends Component {
   render() {
     const { allPeopleCollections, students } = this.props
     const headerText =
-    <FormattedMessage
-        id="app.slides.otherPrograms.header"
-        description="Text for the header of the slide."
-        defaultMessage="Other programs"
-    />
+      <FormattedMessage
+          id="app.slides.otherPrograms.header"
+          description="Text for the header of the slide."
+          defaultMessage="Other programs"
+      />
     const props = {
       students,
       allPeopleCollections,

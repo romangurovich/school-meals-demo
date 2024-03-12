@@ -76,11 +76,11 @@ class Foster extends Component {
   render() {
     const { allPeopleCollections, students } = this.props.applicationData
     const headerText =
-    <FormattedMessage
-        id="app.slides.foster.header"
-        description="Text for the header of the slide."
-        defaultMessage="Other programs"
-    />
+      <FormattedMessage
+          id="app.slides.foster.header"
+          description="Text for the header of the slide."
+          defaultMessage="Other programs"
+      />
     const studentCount = students.length
     const props = {
       students: students.items,

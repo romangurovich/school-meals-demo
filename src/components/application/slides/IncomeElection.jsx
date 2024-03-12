@@ -102,11 +102,11 @@ class IncomeElection extends Component {
   render() {
     const { applicationData } = this.props
     const headerText =
-    <FormattedMessage
-        id="app.slides.incomeElection.header"
-        description="Text for the header of the slide."
-        defaultMessage="Your child is probably eligible"
-    />
+      <FormattedMessage
+          id="app.slides.incomeElection.header"
+          description="Text for the header of the slide."
+          defaultMessage="Your child is probably eligible"
+      />
     const allStudents = applicationData.students
     const programSlugs = [
       'isHomeless',
