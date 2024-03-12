@@ -4,6 +4,7 @@ import Slide from '../Slide'
 import Form from '../Form'
 import Fieldset from '../Fieldset'
 import InputField from '../InputField'
+import { organization } from '../../../config'
 import { observer } from 'mobx-react'
 import { FormattedMessage } from 'react-intl'
 import Checkbox from '../Checkbox'
@@ -32,27 +33,22 @@ class Contact extends Component {
 
     return (
       <Slide header={headerText} id="contact" beginsSection>
-        <p className="usa-font-lead">
+        <h2>
           <FormattedMessage
               id="app.slides.contact.mailingAddress"
               description="Mailing address"
               defaultMessage="Mailing address"
           />
-        </p>
-
-        <p>
-          <FormattedMessage
-              id="app.slides.contact.almostDone"
-              description="Almost done"
-              defaultMessage="You're almost done!"
-          />
-        </p>
+        </h2>
 
         <p>
           <FormattedMessage
               id="app.slides.contact.validAddress"
               description="Note to enter valid address"
-              defaultMessage="Enter a valid mailing address where we can send you a Summer EBT debit card if you qualify."
+              defaultMessage="Please enter your contact information so that we can reach you. A valid home mailing address is critical as this is where Summer EBT card(s) will be sent. {stateName} will assist applicants who do not have a fixed mailing address so they may obtain Summer EBT benefits."
+              values={{
+                stateName: organization.state
+              }}
           />
         </p>
 
@@ -187,13 +183,13 @@ class Contact extends Component {
             </p>
           </Fieldset>
 
-          <p className="usa-font-lead">
+          <h2 className="usa-font-lead">
             <FormattedMessage
                 id="app.slides.contact.additionalContactInfo"
                 description="Additional contact info"
                 defaultMessage="Additional contact info"
             />
-          </p>
+          </h2>
 
           <p>
             <FormattedMessage
