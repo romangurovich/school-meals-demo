@@ -40,13 +40,13 @@ class Summary extends Component {
       <FormattedMessage
           id="app.slides.summary.header"
           description="Text for the header of the slide."
-          defaultMessage="Summary"
+          defaultMessage="Confirm what you entered"
       />
 
     const nextText =
       <FormattedMessage
           id="app.slides.summary.nextText"
-          description="Text on the button to submit final applicaiton."
+          description="Text on the button to submit final application."
           defaultMessage="Submit"
       />
 
@@ -58,18 +58,33 @@ class Summary extends Component {
           id="summary"
           beginsSection
       >
-        <p className="usa-font-lead">
-          <FormattedMessage
-              id="app.slides.summary.finished"
-              description="Awesome, you're finished!"
-              defaultMessage="Awesome, you finished!"
-          />
-        </p>
         <p>
           <FormattedMessage
               id="app.slides.summary.summaryInfo"
               description="Summary Info is below"
-              defaultMessage="Here is a summary of the information you provided in the application. We encourage you to save or print this screen for your records. If everything looks good, click the 'Submit' button at the bottom of the page."
+              defaultMessage="Here is a summary of the information you provided. We'll email you a copy of this screen if you entered your email address."
+          />
+        </p>
+        <p>
+          <FormattedMessage
+              id="app.slides.summary.looksGood"
+              description="Submit if looks good"
+              defaultMessage="If everything looks good, check the boxes below and click {bolded}."
+              values={{
+                bolded: <strong><FormattedMessage
+                    id="app.slides.summary.looksGood.bolded"
+                    description="Submit"
+                    defaultMessage="Submit"
+                                /></strong>
+              }}
+          />
+        </p>
+
+        <p>
+          <FormattedMessage
+              id="app.slides.summary.callToEdit"
+              description="Call to edit in case anything is wrong"
+              defaultMessage="If things don't look correct, click on the pencil to change information. You won't lose your work by going back."
           />
         </p>
 
@@ -242,13 +257,6 @@ class Summary extends Component {
             }
           </Checkbox>
         </Checkboxes>
-        <p><small><em>
-          <FormattedMessage
-              id="app.slides.summary.finePrint"
-              description="fine print, if info is wrong, it is fraud."
-              defaultMessage="*I understand that this information is given in connection with the receipt of Federal funds, and that school officials may verify (check) the information. I am aware that if I purposely give false information, my children may lose meal benefits. Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
-          />
-        </em></small></p>
       </Slide>
     )
   }

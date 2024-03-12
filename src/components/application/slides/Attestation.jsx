@@ -40,13 +40,7 @@ class Attestation extends Component {
               defaultMessage="In addition, I certify (promise) that I am not already receiving Summer EBT benefits in another State or ITO (Indian Tribal Organization)."
           />
         </p>
-        <p>
-          <FormattedMessage
-              id="app.slides.attestation.trueAndCorrect"
-              description="Certify truth and correctness"
-              defaultMessage="All information I will give in the application is true and correct."
-          />
-        </p>
+
         <p>
           <FormattedMessage
               id="app.slides.attestation.understand"

@@ -13,7 +13,7 @@ class Students extends Component {
       <FormattedMessage
           id="app.slides.students.header"
           description="Text for the header of the slide."
-          defaultMessage="Students."
+          defaultMessage="Students"
       />
 
 
