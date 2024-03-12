@@ -6,8 +6,6 @@ import IncomeSource from '../IncomeSource'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { incomeTypeIsValid, informalName } from '../../../helpers'
-import { tooltiptext } from '../../Tooltiptext'
-import Tooltip from '../Tooltip'
 import { FormattedMessage } from 'react-intl'
 
 @observer
@@ -36,9 +34,19 @@ class ChildIncomeSlide extends Component {
           defaultMessage="Missing Income"
       />
 
+    const titleText =
+      <FormattedMessage
+          id="app.slides.childIncomeSlide.childsIncome"
+          description="Title text for child's income"
+          defaultMessage="{child}'s income"
+          values={{
+            child: name
+          }}
+      />
+
     return (
       <Slide
-          header={name}
+          header={titleText}
           id={`income/${person.id}/child`}
           helpArticle="child-income"
           nextDisabled={!incomeTypeIsValid(incomeType)}
@@ -59,40 +67,24 @@ class ChildIncomeSlide extends Component {
           <FormattedMessage
               id="app.slides.childIncomeSlide.incomeReported"
               description="Income reported should be child's."
-              defaultMessage="Income reported here should be the child’s {tooltip}, {gross}  income."
+              defaultMessage="Income reported here should be the child’s {bold} income."
               values={{
-                tooltip: <Tooltip text={tooltiptext.currentChild} >
+                bold: <strong>
                   <FormattedMessage
-                      id="app.slides.childIncomeSlide.current"
-                      description="current"
-                      defaultMessage="current"
+                      id="app.slides.childIncomeSlide.currentGross"
+                      description="current gross"
+                      defaultMessage="current, gross"
                   />
-                </Tooltip>,
-                gross: <em>
-                  <FormattedMessage
-                      id="app.slides.childIncomeSlide.gross"
-                      description="gross"
-                      defaultMessage="gross"
-                  />
-                </em>
+                </strong>
               }}
           />
         </p>
 
-        <p className="well">
+        <p>
           <FormattedMessage
               id="app.slides.childIncomeSlide.childGross"
               description="Gross Income definition."
-              defaultMessage="{grossIncome}  means all money earned or received before deductions, such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as “take home pay.”"
-              values={{
-                grossIncome: <dfn>
-                  <FormattedMessage
-                      id="app.slides.childIncomeSlide.grossIncome"
-                      description="Gross income"
-                      defaultMessage="Gross income"
-                  />
-                </dfn>
-              }}
+              defaultMessage="Gross income means all money earned or received before deductions such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check."
           />
         </p>
 
@@ -103,7 +95,10 @@ class ChildIncomeSlide extends Component {
           <FormattedMessage
               id="app.slides.childIncomeSlide.moneyEarned"
               description="Money earned from a full or part-time job"
-              defaultMessage="Money earned from a full or part-time job"
+              defaultMessage="Does {child} earn money from a full or part-time job? Don't include infrequent earnings, such as income from occasional baby-sitting or mowing lawns."
+              values={{
+                child: name
+              }}
           />
         </IncomeSource>
 
@@ -111,22 +106,9 @@ class ChildIncomeSlide extends Component {
           <FormattedMessage
               id="app.slides.childIncomeSlide.supplementalIncome"
               description="Supplemental income"
-              defaultMessage="Supplemental Security Income {tooltip} or Social Security {tooltip2}"
+              defaultMessage="Does {child} receive Supplemental Security Income (SSI) or Social Security survivor benefits?"
               values={{
-                tooltip: <Tooltip text={tooltiptext.ssiChildren} >
-                  <FormattedMessage
-                      id="app.slides.childIncomeSlide.ssiChildren"
-                      description="SSI"
-                      defaultMessage="(SSI)"
-                  />
-                </Tooltip>,
-                tooltip2: <Tooltip text={tooltiptext.ssSurvivor} >
-                  <FormattedMessage
-                      id="app.slides.childIncomeSlide.ssSurvivor"
-                      description="survivor benefits"
-                      defaultMessage="survivor benefits"
-                  />
-                </Tooltip>
+                child: name
               }}
           />
         </IncomeSource>
@@ -135,15 +117,9 @@ class ChildIncomeSlide extends Component {
           <FormattedMessage
               id="app.slides.childIncomeSlide.regularCash"
               description="Regular Cash Payments"
-              defaultMessage="{tooltip} from extended family or friends outside the household"
+              defaultMessage="Does {child} regularly receive income from extended family or friends outside the household?"
               values={{
-                tooltip: <Tooltip text={tooltiptext.regularCashPayments} >
-                  <FormattedMessage
-                      id="app.slides.childIncomeSlide.regularCashPayments"
-                      description="Money regularly received"
-                      defaultMessage="Money regularly received"
-                  />
-                </Tooltip>
+                child: name
               }}
           />
         </IncomeSource>
@@ -152,29 +128,9 @@ class ChildIncomeSlide extends Component {
           <FormattedMessage
               id="app.slides.childIncomeSlide.pensionAnnuityTrust"
               description="Pensions annuities & trusts"
-              defaultMessage="{tooltip}, {tooltip2}, or {tooltip3}"
+              defaultMessage="Does {child} receive a pension , annuity, or trust?"
               values={{
-                tooltip: <Tooltip text={tooltiptext.pensionChildren} >
-                  <FormattedMessage
-                      id="app.slides.childIncomeSlide.pensionChildren"
-                      description="Pension"
-                      defaultMessage="Pension"
-                  />
-                </Tooltip>,
-                tooltip2: <Tooltip text={tooltiptext.annuityChildren} >
-                  <FormattedMessage
-                      id="app.slides.childIncomeSlide.annuityChildren"
-                      description="annuity"
-                      defaultMessage="annuity"
-                  />
-                </Tooltip>,
-                tooltip3: <Tooltip text={tooltiptext.trust} >
-                  <FormattedMessage
-                      id="app.slides.childIncomeSlide.trust"
-                      description="trust"
-                      defaultMessage="trust"
-                  />
-                </Tooltip>
+                child: name
               }}
           />
         </IncomeSource>
@@ -183,7 +139,10 @@ class ChildIncomeSlide extends Component {
           <FormattedMessage
               id="app.slides.childIncomeSlide.otherIncome"
               description="other income"
-              defaultMessage="Any other source of income"
+              defaultMessage="Does {child} regularly receive money from any other source of income?"
+              values={{
+                child: name
+              }}
           />
         </IncomeSource>
 

@@ -3,8 +3,6 @@ import Slide from '../Slide'
 import IncomeTypeFormGroup from '../IncomeTypeFormGroup'
 import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
-import { tooltiptext } from '../../Tooltiptext'
-import Tooltip from '../Tooltip'
 import { FormattedMessage } from 'react-intl'
 
 @observer
@@ -31,18 +29,32 @@ class ChildIncomeOverview extends Component {
       />
     )
 
+    const pluralizedChildrenIncomeCapital = (allChildren.length === 1 ?
+      <FormattedMessage
+          id="app.slides.childIncomeOverview.singleChildIncome.capital"
+          description="Possessive phrase for a single child's income."
+          defaultMessage="Child's income"
+      /> :
+      <FormattedMessage
+          id="app.slides.childIncomeOverview.multipleChildIncome.capital"
+          description="Possessive phrase for multiple children's income."
+          defaultMessage="Children's income"
+      />
+    )
+
     return (
-      <Slide nextDisabled={!this.isValid} id="child-income">
+      <Slide
+          header={pluralizedChildrenIncomeCapital}
+          nextDisabled={!this.isValid} id="child-income"
+      >
 
         <p>
           <FormattedMessage
               id="app.slides.childIncomeOverview.intro"
               description="Introductory paragraph."
-              defaultMessage="The next few questions are about your {tooltip}."
+              defaultMessage="The next few questions are about your {child}."
               values={{
-                tooltip: <Tooltip text={tooltiptext.childincome}>
-                  {pluralizedChildrenIncome}
-                </Tooltip>
+                child: pluralizedChildrenIncome
               }}
           />
         </p>
@@ -59,22 +71,22 @@ class ChildIncomeOverview extends Component {
             <FormattedMessage
                 id="app.slides.childIncomeOverview.fullOrPartJob"
                 description="Full or part-time job"
-                defaultMessage="a full or part-time job,"
+                defaultMessage="a full- or part-time job"
             />
           </li>
           <li>
             <FormattedMessage
                 id="app.slides.childIncomeOverview.ssi"
                 description="SSI"
-                defaultMessage="Supplemental Security Income {socialSecurity}, if the child is disabled"
+                defaultMessage="Supplemental Security Income {bolded}, if the child is disabled"
                 values={{
-                  socialSecurity: <Tooltip text={tooltiptext.ssiChildren}>
+                  bolded: <strong>
                     <FormattedMessage
                         id="app.slides.childIncomeOverview.social"
-                        description="social"
+                        description="ssi"
                         defaultMessage="(SSI)"
                     />
-                  </Tooltip>
+                  </strong>
                 }}
             />
           </li>
@@ -82,16 +94,15 @@ class ChildIncomeOverview extends Component {
             <FormattedMessage
                 id="app.slides.childIncomeOverview.socialSecurity"
                 description="Social Security"
-                defaultMessage="Social Security benefits for children of a disabled, retired, or deceased parent"
+                defaultMessage="{socialSecurity} benefits for children of a disabled, retired, or deceased parent"
                 values={{
-                  socialSecurity: <Tooltip text={tooltiptext.ssiChildren} />,
-                  beneficiary: <Tooltip text={tooltiptext.ssSurvivor}>
+                  socialSecurity: <strong>
                     <FormattedMessage
-                        id="app.slides.childIncomeOverview.benefit"
-                        description="benefit"
+                        id="app.slides.childIncomeOverview.socialSecurity.word"
+                        description="socialSecurity"
                         defaultMessage="Social Security"
                     />
-                  </Tooltip>
+                  </strong>
                 }}
             />
           </li>
@@ -107,30 +118,7 @@ class ChildIncomeOverview extends Component {
             <FormattedMessage
                 id="app.slides.childIncomeOverview.moneyFrom"
                 description="money From pension, annuity, or trust"
-                defaultMessage="money from a {pension}, {annuity}, or {trust}"
-                values={{
-                  pension: <Tooltip text={tooltiptext.pensionChildren}>
-                    <FormattedMessage
-                        id="app.slides.childIncomeOverview.pension"
-                        description="pension"
-                        defaultMessage="pension"
-                    />
-                  </Tooltip>,
-                  annuity: <Tooltip text={tooltiptext.annuityChildren}>
-                    <FormattedMessage
-                        id="app.slides.childIncomeOverview.annuity"
-                        description="annuity"
-                        defaultMessage="annuity"
-                    />
-                  </Tooltip>,
-                  trust: <Tooltip text={tooltiptext.trust}>
-                    <FormattedMessage
-                        id="app.slides.childIncomeOverview.trust"
-                        description="trust"
-                        defaultMessage="trust"
-                    />
-                  </Tooltip>
-                }}
+                defaultMessage="money from a pension, annuity, or trust"
             />
           </li>
         </ul>
