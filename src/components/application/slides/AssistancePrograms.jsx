@@ -2,11 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import AssistanceProgramList from './AssistanceProgramList'
 import { observer } from 'mobx-react'
-import { assistanceProgramsVar } from '../../../config'
 import { ApplicationData } from '../../../stores/ApplicationData'
-import { tooltiptext } from '../../Tooltiptext'
-import Tooltip from '../Tooltip'
-import InformalNameList from '../InformalNameList'
 import { FormattedMessage } from 'react-intl'
 
 @observer
@@ -14,7 +10,6 @@ class AssistancePrograms extends Component {
   render() {
     const { applicationData } = this.props
     const {
-      students,
       assistancePrograms
     } = applicationData
     const headerText =
@@ -24,7 +19,8 @@ class AssistancePrograms extends Component {
           defaultMessage="Programs"
       />
     return (
-      <Slide header={headerText} id="assistance-programs"
+      <Slide
+          header={headerText} id="assistance-programs"
           nextDisabled={!assistancePrograms.isValid}
       >
         <p>
