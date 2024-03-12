@@ -21,6 +21,13 @@ class AssistanceProgram extends Component {
             object={program}
         />
         }
+                <p>
+          <FormattedMessage
+              id="app.slides.assistanceProgram.noCaseNumber"
+              description="Text directing user to enter income information if no case number is available."
+              defaultMessage="If you don't have a case number, we'll ask you to enter your income information to make sure you qualify."
+          />
+        </p>
       </div>
     )
   }
