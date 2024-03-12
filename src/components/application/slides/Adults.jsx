@@ -50,7 +50,7 @@ class Adults extends Component {
           <FormattedMessage
               id="app.slides.adults.adultsInto"
               description="Intro Paragraph"
-              defaultMessage=" let’s talk about the adults in your household."
+              defaultMessage="Let's talk about the adults in your household."
           />
         </p>
         <p>
