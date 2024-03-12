@@ -3,8 +3,6 @@ import Slide from '../Slide'
 import IncomeTypeFormGroup from '../IncomeTypeFormGroup'
 import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
-import { tooltiptext } from '../../Tooltiptext'
-import Tooltip from '../Tooltip'
 import { FormattedMessage } from 'react-intl'
 
 @observer
@@ -31,7 +29,7 @@ class ChildIncomeOverview extends Component {
       />
     )
 
-      const pluralizedChildrenIncomeCapital = (allChildren.length === 1 ?
+    const pluralizedChildrenIncomeCapital = (allChildren.length === 1 ?
       <FormattedMessage
           id="app.slides.childIncomeOverview.singleChildIncome.capital"
           description="Possessive phrase for a single child's income."
@@ -46,9 +44,9 @@ class ChildIncomeOverview extends Component {
 
     return (
       <Slide
-        header={pluralizedChildrenIncomeCapital}
-        id="childIncomeOverview"
-        nextDisabled={!this.isValid} id="child-income">
+          header={pluralizedChildrenIncomeCapital}
+          nextDisabled={!this.isValid} id="child-income"
+      >
 
         <p>
           <FormattedMessage
@@ -84,9 +82,9 @@ class ChildIncomeOverview extends Component {
                 values={{
                   bolded: <strong>
                     <FormattedMessage
-                      id="app.slides.childIncomeOverview.social"
-                      description="ssi"
-                      defaultMessage="(SSI)"
+                        id="app.slides.childIncomeOverview.social"
+                        description="ssi"
+                        defaultMessage="(SSI)"
                     />
                   </strong>
                 }}
@@ -100,9 +98,9 @@ class ChildIncomeOverview extends Component {
                 values={{
                   socialSecurity: <strong>
                     <FormattedMessage
-                      id="app.slides.childIncomeOverview.socialSecurity.word"
-                      description="socialSecurity"
-                      defaultMessage="Social Security"
+                        id="app.slides.childIncomeOverview.socialSecurity.word"
+                        description="socialSecurity"
+                        defaultMessage="Social Security"
                     />
                   </strong>
                 }}

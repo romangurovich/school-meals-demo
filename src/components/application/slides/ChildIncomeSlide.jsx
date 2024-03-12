@@ -6,15 +6,12 @@ import IncomeSource from '../IncomeSource'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { incomeTypeIsValid, informalName } from '../../../helpers'
-import { tooltiptext } from '../../Tooltiptext'
-import Tooltip from '../Tooltip'
 import { FormattedMessage } from 'react-intl'
 
 @observer
 class ChildIncomeSlide extends Component {
   @computed get allSourcesFalse() {
     const sources = this.props.person.incomeTypes.child.sources
-    console.log(sources)
 
     for (const key in sources) {
       if (sources[key].has !== false) {
