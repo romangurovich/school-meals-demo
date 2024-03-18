@@ -146,14 +146,17 @@
   "app.slides.adultIncomeOverview.earnedInterest": "interés acumulado",
   "app.slides.adultIncomeOverview.annuity": "anualidades",
 
+  
+  "app.slides.adults.header": "Otros adultos",
   "app.slides.adults.adultsInto": "Bueno, ahora hablemos de los adultos del hogar.",
-  "app.slides.adults.notIncluding": "Sin incluir a {attestor}, ¿qué otros adultos viven en el hogar?",
-  "app.slides.adults.remember": "Recuerde, con los propósitos de solicitar beneficios de comidas escolares, un hogar se define como un grupo de personas, relacionadas o no relacionadas, que suelen vivir juntas y compartir ingresos y gastos. No se olvide de las siguientes personas:",
-  "app.slides.adults.grandparents": "los abuelos u otros miembros de la familia extendida que viven con usted",
-  "app.slides.adults.alsoInclude": "También debe incluir a las personas que no viven con usted actualmente, pero que viven lejos de manera temporal, como las siguientes personas:",
-  "app.slides.adults.collegeKids": "hijos que se han ido a la universidad,",
-  "app.slides.adults.military": "miembros de la familia que están en el ejército, que han sido desplegados",
-  "app.slides.adults.includeRegardless": "Incluya a las personas sin importar la edad o si ganan o reciben ingresos.",
+  "app.slides.adults.notIncluding": "Además de {attestor}, ¿cuáles son los otros adultos que viven en su hogar?",
+  "app.slides.adults.remember": "Recuerde, en este programa de EBT de verano, se defina un hogar como {bolded}.",
+  "app.slides.adults.remember.bolded": "un grupo de personas, parientes o no, que normalmente viven juntos y comparten ingresos y gastos",
+  "app.slides.adults.be.sure.to": "Asegúrese de incluir a abuelos o miembros de familia extendida que viven con usted.",
+  "app.slides.adults.dont.forget": "No se olvide de personas que generalmente viven que usted pero están temporalmente fuera, como:",
+  "app.slides.adults.kids": "Niños que tienen más de 18 años que están fuera para asistir la universidad",
+  "app.slides.adults.family.military": "Miembros de la familia que están desplegados con las fuerzas armadas",
+  "app.slides.adults.relatives": "Parientes que viven con usted durante mucho del año pero están fuera ahora",
   "app.slides.adults.label": "Adulto",
   "app.slides.adults.nextText": "No hay otros adultos",
 
@@ -293,8 +296,8 @@
   "app.slides.employmentIncome.selfEmployment": "Ingresos netos del {tooltip}",
   "app.slides.employmentIncome.tooltipSelf": "empleado autónomo",
 
-  "app.slides.foster.label": "¿{studentNames} {studentCount, plural, one {vive} other {viven}} con usted por un arreglo formal de hogar de acogida (ordenado por un tribunal)?",
-  "app.slides.foster.confirm": "¡No hay problema! Existen otras maneras en las que puede calificar.",
+  "app.slides.foster.label": "¿Vive {studentNames} {studentCount, plural, one {vive} other {viven}} con usted por un arreglo formal de hogar de acogida (orden judicial)?",
+  "app.slides.foster.confirm": "Hay varios métodos de calificar para los beneficios EBT de verano.",
 
   "app.slides.gettingReady.header": "Preparándose",
   "app.slides.gettingReady.intro": "Para cualquier pregunta mientras completa la solicitud, haga clic en el signo de interrogación o en {bolded}. También puede colocar el curso sobre algunas palabras para ver las definiciones.",
@@ -413,16 +416,17 @@
   "app.slides.otherIncome.annuity": "Anualidades",
   "app.slides.otherIncome.otherIncome": "Cualquier otro tipo de ingresos disponibles para pagar las comidas escolares de los niños",
 
+  "app.slides.otherPrograms.header": "Otros programas",
   "app.slides.otherPrograms.intro": "Su hijo también puede calificar para obtener comidas gratis si puede marcar alguna de estas opciones.",
 
-  "app.slides.otherPrograms.isHomeless.label": "¿{studentNames} {studentCount, plural, one {recibe} other {reciben}} asistencia de la {programName}?",
-  "app.slides.otherPrograms.isHomeless": "Si no la {studentCount, plural, one {recibe} other {reciben}}, pero su hogar no tiene una dirección permanente, o si viven juntos en un refugio, hotel u otro arreglo de vivienda temporal, comuníquese con {organizationName} para obtener ayuda.",
+  "app.slides.otherPrograms.isHomeless.label": "¿Recibe uno(s) de sus niños asistencia bajo el {programName}?",
+  "app.slides.otherPrograms.isHomeless": "Si nadie la recibe pero su hogar no tiene dirección permanente o vive juntos en un refugio, hotel u otro arreglo de vivienda temporal, comuníquese con {stateName} para obtener asistencia.",
 
-  "app.slides.otherPrograms.isMigrant.label": "¿{studentNames} {studentCount, plural, one {participa} other {participan}} en {programName}?",
-  "app.slides.otherPrograms.isMigrant": "Si no {studentCount, plural, one {participa} other {participan}}, pero se ha mudado a otro distrito escolar en los últimos tres años para obtener o buscar trabajo temporal/por temporada en agricultura o pesca, comuníquese con {organizationName} para obtener ayuda.",
+  "app.slides.otherPrograms.isMigrant.label": "Participa alguno(s) de sus niños en el {programName}?",
+  "app.slides.otherPrograms.isMigrant": "Si no participa pero su hogar se ha mudado a otro distrito escolar en los últimos tres años para obtender o buscar trabajo temporal/por temporada en agricultura o pesca, comuníquese con {stateName} para obtener asistencia.",
 
-  "app.slides.otherPrograms.isRunaway.label": "¿{studentNames} {studentCount, plural, one {participa} other {participan}} en un programa de {programName}?",
-  "app.slides.otherPrograms.isRunaway": "Si no {studentCount, plural, one {participa} other {participan}}, pero {studentCount, plural, one {decidió} other {decidieron}} alejarse de su familia o hogar anterior, comuníquese con {organizationName} para obtener ayuda.",
+  "app.slides.otherPrograms.isRunaway.label": "¿Participa alguno(s) de sus niños en un programa del {programName}?",
+  "app.slides.otherPrograms.isRunaway": "Si no participa pero decidió alejarse de su familia o hogar anterior, comuníquese con {stateName} para obtener asistencia.",
 
   "app.slides.otherProgramsProgram.whichStudents": "¿Cuáles estudiantes?",
   "app.slides.otherProgramsProgram.labelPrefix": "{studentLength, plural, one {Does} other {Do}} {students}",
