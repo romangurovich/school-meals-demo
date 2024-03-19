@@ -296,8 +296,8 @@
   "app.slides.employmentIncome.selfEmployment": "Ingresos netos del {tooltip}",
   "app.slides.employmentIncome.tooltipSelf": "empleado autónomo",
 
-  "app.slides.foster.label": "¿Vive {studentNames} {studentCount, plural, one {vive} other {viven}} con usted por un arreglo formal de hogar de acogida (orden judicial)?",
   "app.slides.foster.confirm": "Hay varios métodos de calificar para los beneficios EBT de verano.",
+  "app.slides.foster.label": "¿Vive {studentNames} {studentCount, plural, one {vive} other {viven}} con usted bajo un arreglo formal (orden judicial) de niños en acogimiento (foster care)?",
 
   "app.slides.gettingReady.header": "Preparándose",
   "app.slides.gettingReady.intro": "Para cualquier pregunta mientras completa la solicitud, haga clic en el signo de interrogación o en {bolded}. También puede colocar el curso sobre algunas palabras para ver las definiciones.",
@@ -401,10 +401,10 @@
 
   "app.slides.otherChildren.intro": "Bueno, parece que necesitaremos más información sobre su {tooltip} y sus ingresos para determinar si es elegible para recibir beneficios.",
   "app.slides.otherChildren.introTooltip": "hogar",
-  "app.slides.otherChildren.namedChildren": "Ahora hablemos de los otros niños del hogar y luego pasaremos a los adultos. Además de {namedChildren}, ¿viven otros niños en su hogar? No olvide incluir lo siguiente",
-  "app.slides.otherChildren.childType1": "estudiantes que estén en 12.º grado o menos que asisten a la escuela en otro distrito escolar que no sea {organizationName}",
-  "app.slides.otherChildren.childType2": "niños que asisten a la guardería o a preescolar o que no tengan edad escolar, incluidos los bebés pequeños",
-  "app.slides.otherChildren.childType3": "cualquier persona de 18 años de edad o menos que viva en su hogar y que no asista a la escuela actualmente",
+  "app.slides.otherChildren.namedChildren": "Primero le preguntamos sobre los niños en su hogar y después sobre los adultos. Además de {namedChildren}, ¿hay otros niños en su hogar? Por favor, incluya a:",
+  "app.slides.otherChildren.childType1": "Niños que asisten guardería o programas pre-escolares",
+  "app.slides.otherChildren.childType2": "infantes o niños bajo la edad escolar o no inscritos en escuela",
+  "app.slides.otherChildren.childType3": "Otros miembros de su hogar con 18 años o menos que no ha indicado en cualquier otra parte de esta solicitud",
   "app.slides.otherChildren.nextText": "No hay otros niños",
   "app.slides.otherChildren.label": "Niño",
 
